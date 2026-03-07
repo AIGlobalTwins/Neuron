@@ -26,6 +26,7 @@ Given a transcript, meeting summary, or notes, produce:
 - Preserve manual steps, delays, handoffs, and approval points.
 - Do not jump to future-state optimisation in this phase.
 - Process truth matters more than diagram neatness.
+- If no diagram connector or external diagram tool is confirmed, still provide fallback artefacts that remain useful now, such as structured markdown, Mermaid, or JSON diagram specs.
 
 ## Extraction checklist
 
@@ -88,6 +89,7 @@ Provide a clean JSON block with:
 
 ## 7. Excalidraw diagram spec
 Provide a JSON-like node/edge structure suitable for a downstream diagram generator.
+If no diagram capability is confirmed in the environment, treat this as a fallback deliverable rather than a blocked step.
 
 ## Excalidraw spec schema
 

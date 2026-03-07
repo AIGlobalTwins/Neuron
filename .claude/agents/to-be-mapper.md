@@ -30,6 +30,7 @@ Given a transcript, AS-IS map, and opportunity analysis, produce:
   - exception path.
 - If the process is too ambiguous, return a provisional TO-BE and list validation points.
 - Optimise for implementability, not theatre.
+- If no diagram connector or external diagram tool is confirmed, still provide fallback artefacts that remain useful now, such as structured markdown, Mermaid, or JSON diagram specs.
 
 ## Design principles
 
@@ -84,6 +85,7 @@ Use node types:
 - handoff
 - output
 - exception
+If no diagram capability is confirmed in the environment, treat this as a fallback deliverable rather than a blocked step.
 
 ## Tone
 

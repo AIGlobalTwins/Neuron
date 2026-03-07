@@ -10,6 +10,26 @@ Feed it a project brief, repository, or client meeting transcript and Neuron can
 
 This is not just a tool recommender. It is a lightweight delivery framework for discovery and automation projects.
 
+## Capability routing model
+
+Neuron is designed to work with a real capability inventory instead of assuming all tools exist.
+
+For each important outcome, Neuron separates capabilities into:
+
+1. `AVAILABLE_NOW`  
+Capabilities already present in the user's environment.
+
+2. `RECOMMENDED_TO_ADD`  
+Capabilities that are missing but would materially improve the case.
+
+3. `FALLBACK_OUTPUTS`  
+Useful intermediate outputs Neuron can still generate if the ideal capability is not available.
+
+Example:
+- If an Excalidraw connector exists, Neuron can route diagram work there.
+- If it does not exist, Neuron can recommend adding it.
+- If the user still does not have it, Neuron should continue with Mermaid, structured markdown, or JSON diagram specs instead of blocking.
+
 ## What's new in v0.2.0
 
 Neuron V2 expands the original project evaluator into a 4-agent pipeline:
@@ -125,6 +145,11 @@ Neuron gets materially better when you provide:
 - known systems and constraints,
 - any current repo or existing implementation,
 - budget / deadline / compliance constraints.
+
+The capability inventory should reflect real environment state and help Neuron distinguish between:
+- what already exists,
+- what should be added,
+- what fallback output is still executable now.
 
 ## Product positioning
 
