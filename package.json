@@ -1,0 +1,41 @@
+{
+  "name": "neuron-cc",
+  "version": "0.2.0",
+  "description": "Neuron installer and Claude Code capability-routing package.",
+  "license": "MIT",
+  "author": {
+    "name": "Gemeo",
+    "url": "https://github.com/AIGlobalTwins"
+  },
+  "homepage": "https://github.com/AIGlobalTwins/Neuron",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIGlobalTwins/Neuron.git"
+  },
+  "bin": {
+    "neuron-cc": "scripts/install.js"
+  },
+  "files": [
+    ".claude/",
+    ".claude-plugin/",
+    "agents/",
+    "commands/",
+    "examples/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "installer",
+    "plugin",
+    "agents",
+    "commands",
+    "automation",
+    "discovery"
+  ]
+}

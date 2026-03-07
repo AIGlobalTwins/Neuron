@@ -161,8 +161,43 @@ That is stronger and more honest than describing it only as an agent recommender
 
 ## Installation
 
-### Local testing
-Use plugin upload / install flows supported by your Claude environment.
+Neuron is structured to support three installation modes:
+- direct use from the GitHub repository,
+- `npx` installer for Claude Code,
+- future plugin or marketplace distribution.
+
+### npx installer for Claude Code
+
+Global install:
+
+```bash
+npx neuron-cc@latest --claude --global
+```
+
+Local install in the current project:
+
+```bash
+npx neuron-cc@latest --claude --local
+```
+
+What the installer does:
+- copies commands into `~/.claude/commands/` or `./.claude/commands/`
+- copies agents into `~/.claude/agents/` or `./.claude/agents/`
+- ensures `/neuron` is available in Claude Code
+- also installs the direct aliases `/neuron-avaliar-projeto` and `/neuron-analisar-reuniao`
+
+### Direct use from GitHub
+
+Clone the repository and either use the included `.claude/` structure directly or run the installer script from the repo:
+
+```bash
+git clone https://github.com/AIGlobalTwins/Neuron.git
+cd Neuron
+node scripts/install.js --claude --local
+```
+
+### Plugin / marketplace style
+Use plugin upload or install flows supported by your Claude environment when you want the `.claude-plugin` package form.
 
 ### Claude Code local commands
 If you want Neuron to appear in the Claude Code `/` command menu, use the local Claude Code structure included in this repo:
