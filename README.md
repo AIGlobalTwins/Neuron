@@ -150,6 +150,13 @@ The Claude Code entrypoint is:
 /neuron
 ```
 
+You can also call the direct aliases:
+
+```text
+/neuron-avaliar-projeto
+/neuron-analisar-reuniao
+```
+
 Examples:
 
 ```text
@@ -158,6 +165,14 @@ Examples:
 
 ```text
 /neuron analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
+```
+
+```text
+/neuron-avaliar-projeto Quero criar um SaaS com auth, billing, dashboard admin e automações com IA.
+```
+
+```text
+/neuron-analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
 ```
 
 ### GitHub distribution
