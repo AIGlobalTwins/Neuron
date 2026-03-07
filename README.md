@@ -139,6 +139,27 @@ That is stronger and more honest than describing it only as an agent recommender
 ### Local testing
 Use plugin upload / install flows supported by your Claude environment.
 
+### Claude Code local commands
+If you want Neuron to appear in the Claude Code `/` command menu, use the local Claude Code structure included in this repo:
+- `.claude/commands/neuron.md`
+- `.claude/agents/*.md`
+
+The Claude Code entrypoint is:
+
+```text
+/neuron
+```
+
+Examples:
+
+```text
+/neuron avaliar-projeto Quero criar um SaaS com auth, billing, dashboard admin e automações com IA.
+```
+
+```text
+/neuron analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
+```
+
 ### GitHub distribution
 Publish the repository and share it as a reusable plugin package.
 
