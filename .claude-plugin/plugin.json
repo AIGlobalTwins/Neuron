@@ -1,0 +1,37 @@
+{
+  "name": "neuron",
+  "version": "0.2.0",
+  "description": "A Claude Code process-discovery and project-orchestration plugin for turning meeting transcripts into AS-IS maps, opportunity analysis, capability routing, and TO-BE automation proposals.",
+  "author": {
+    "name": "Gemeo",
+    "url": "https://github.com/AIGlobalTwins"
+  },
+  "homepage": "https://github.com/AIGlobalTwins/Neuron",
+  "repository": "https://github.com/AIGlobalTwins/Neuron",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "subagent",
+    "process-mapping",
+    "automation",
+    "discovery",
+    "orchestration",
+    "mcp",
+    "excalidraw"
+  ],
+  "components": {
+    "agents": [
+      "project-evaluator",
+      "as-is-mapper",
+      "opportunity-analyzer",
+      "to-be-mapper"
+    ],
+    "commands": [
+      "avaliar-projeto",
+      "analisar-reuniao"
+    ]
+  },
+  "agents": "./agents/",
+  "commands": "./commands/"
+}
