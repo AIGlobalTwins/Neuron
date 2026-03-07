@@ -20,7 +20,7 @@ Neuron V2 expands the original project evaluator into a 4-agent pipeline:
 4. `to-be-mapper` → designs the target-state process and automation insertion points
 
 It also adds a new orchestration command:
-- `/analisar-reuniao`
+- `/neuron-analisar-reuniao`
 
 ## Included components
 
@@ -31,8 +31,8 @@ It also adds a new orchestration command:
 - `agents/to-be-mapper.md`
 
 ### Commands
-- `commands/avaliar-projeto.md` → evaluate a project / repo / transcript
-- `commands/analisar-reuniao.md` → run the Neuron discovery pipeline on a client call transcript
+- `commands/neuron-avaliar-projeto.md` → evaluate a project / repo / transcript
+- `commands/neuron-analisar-reuniao.md` → run the Neuron discovery pipeline on a client call transcript
 
 ### Examples
 - `examples/inventory-template.md`
@@ -62,8 +62,8 @@ neuron/
 │   ├── project-evaluator.md
 │   └── to-be-mapper.md
 ├── commands/
-│   ├── analisar-reuniao.md
-│   └── avaliar-projeto.md
+│   ├── neuron-analisar-reuniao.md
+│   └── neuron-avaliar-projeto.md
 ├── examples/
 │   ├── inventory-template.md
 │   └── transcript-input-template.md
@@ -93,25 +93,25 @@ Discovery report / proposal material
 ### Project evaluation
 
 ```text
-/avaliar-projeto Quero criar um SaaS com auth, billing, dashboard admin e automações com IA. Tenho agents de arquitetura, frontend e backend, e tools para docs e GitHub.
+/neuron-avaliar-projeto Quero criar um SaaS com auth, billing, dashboard admin e automações com IA. Tenho agents de arquitetura, frontend e backend, e tools para docs e GitHub.
 ```
 
 ### Discovery workflow from transcript
 
 ```text
-/analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp, CRM. [colar transcrição]
+/neuron-analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp, CRM. [colar transcrição]
 ```
 
 ## Recommended operating model
 
 ### Best for delivery work
-Use `/analisar-reuniao` when you have:
+Use `/neuron-analisar-reuniao` when you have:
 - a real client transcript,
 - a discovery call summary,
 - meeting notes with process details.
 
 ### Best for routing / planning work
-Use `/avaliar-projeto` when you want:
+Use `/neuron-avaliar-projeto` when you want:
 - capability selection,
 - project orchestration,
 - tool / agent recommendations,

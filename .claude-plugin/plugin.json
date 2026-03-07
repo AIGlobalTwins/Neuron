@@ -28,8 +28,8 @@
       "to-be-mapper"
     ],
     "commands": [
-      "avaliar-projeto",
-      "analisar-reuniao"
+      "neuron-avaliar-projeto",
+      "neuron-analisar-reuniao"
     ]
   },
   "agents": "./agents/",
