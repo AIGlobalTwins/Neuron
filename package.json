@@ -1,5 +1,5 @@
 {
-  "name": "neuron-cc",
+  "name": "@kikompg/neuron-cc",
   "version": "0.2.0",
   "description": "Neuron installer and Claude Code capability-routing package.",
   "license": "MIT",

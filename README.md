@@ -171,13 +171,13 @@ Neuron is structured to support three installation modes:
 Global install:
 
 ```bash
-npx neuron-cc@latest --claude --global
+npx @kikompg/neuron-cc@latest --claude --global
 ```
 
 Local install in the current project:
 
 ```bash
-npx neuron-cc@latest --claude --local
+npx @kikompg/neuron-cc@latest --claude --local
 ```
 
 What the installer does:
