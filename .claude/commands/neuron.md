@@ -42,11 +42,18 @@ Devolve exatamente nesta estrutura:
 ## 11. Next best action
 
 Se a ação for `analisar-reuniao`:
+- o primeiro argumento útil depois da ação pode ser o modo:
+  - `auto`
+  - `advisor`
+- se nenhum modo for indicado, assume `auto`;
 - usa os subagents nesta ordem:
   1. `as-is-mapper`
   2. `opportunity-analyzer`
   3. `project-evaluator`
   4. `to-be-mapper`
+- em `auto`, pode executar o pipeline completo numa só resposta;
+- em `advisor`, executa apenas o próximo passo necessário e termina com recomendação do passo seguinte;
+- em `advisor`, usa o contexto já produzido pelo utilizador para perceber que etapa já foi concluída;
 - não inventes passos que não estejam sustentados no input;
 - lista ambiguidades explicitamente;
 - não recomendes tools não instaladas ou não listadas como disponíveis dentro de `AVAILABLE_NOW`;
@@ -74,5 +81,6 @@ Se a ação for `help` ou estiver ausente:
 - explica que o comando disponível no Claude Code é `/neuron`;
 - mostra estes exemplos:
   - `/neuron avaliar-projeto Quero criar um SaaS com auth, billing e automações com IA.`
-  - `/neuron analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual em leads e follow-ups.`
+  - `/neuron analisar-reuniao auto Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual em leads e follow-ups.`
+  - `/neuron analisar-reuniao advisor Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual em leads e follow-ups.`
 - pede ao utilizador que forneça uma destas ações antes do contexto.

@@ -42,6 +42,10 @@ Neuron V2 expands the original project evaluator into a 4-agent pipeline:
 It also adds a new orchestration command:
 - `/neuron-analisar-reuniao`
 
+It now supports two discovery modes:
+- `Auto` -> runs the full pipeline in one go
+- `Advisor` -> runs one step at a time and suggests the next step
+
 ## Included components
 
 ### Agents
@@ -108,6 +112,50 @@ TO-BE Mapper
 Discovery report / proposal material
 ```
 
+## Discovery modes
+
+### Auto mode
+
+`Auto` is the current end-to-end mode.
+Neuron runs the full discovery pipeline in one response:
+
+```text
+Transcrição
+  ↓
+AS-IS Mapper
+  ↓
+Opportunity Analyzer
+  ↓
+Project Evaluator
+  ↓
+TO-BE Mapper
+```
+
+### Advisor mode
+
+`Advisor` is the guided mode.
+Neuron runs one step at a time, shows the result, and suggests the next step for confirmation:
+
+```text
+Transcrição
+  ↓
+1. AS-IS Mapper
+  ↓
+Mostrar resultado + sugerir próximo passo
+  ↓
+2. Opportunity Analyzer
+  ↓
+Mostrar resultado + sugerir próximo passo
+  ↓
+3. Project Evaluator
+  ↓
+Mostrar resultado + sugerir próximo passo
+  ↓
+4. TO-BE Mapper
+```
+
+In `Advisor` mode, the user can continue by pasting the previous output back into the next `/neuron-analisar-reuniao advisor ...` call.
+
 ## Example usage
 
 ### Project evaluation
@@ -119,12 +167,24 @@ Discovery report / proposal material
 ### Discovery workflow from transcript
 
 ```text
-/neuron-analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp, CRM. [colar transcrição]
+/neuron-analisar-reuniao auto Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp, CRM. [colar transcrição]
+```
+
+```text
+/neuron-analisar-reuniao advisor Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp, CRM. [colar transcrição]
 ```
 
 ## Recommended operating model
 
 ### Best for delivery work
+Use `/neuron-analisar-reuniao auto` when you want the full pipeline in one go.
+
+Use `/neuron-analisar-reuniao advisor` when you want:
+- one stage at a time,
+- explicit review between stages,
+- a shorter response at each step,
+- manual confirmation before moving forward.
+
 Use `/neuron-analisar-reuniao` when you have:
 - a real client transcript,
 - a discovery call summary,
@@ -228,11 +288,23 @@ Examples:
 ```
 
 ```text
+/neuron analisar-reuniao auto Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
+```
+
+```text
+/neuron analisar-reuniao advisor Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
+```
+
+```text
 /neuron-avaliar-projeto Quero criar um SaaS com auth, billing, dashboard admin e automações com IA.
 ```
 
 ```text
-/neuron-analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
+/neuron-analisar-reuniao auto Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
+```
+
+```text
+/neuron-analisar-reuniao advisor Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual na gestão de leads e follow-ups. Sistemas atuais: Gmail, Google Sheets, WhatsApp e CRM.
 ```
 
 ### GitHub distribution
