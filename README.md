@@ -30,7 +30,7 @@ Example:
 - If it does not exist, Neuron can recommend adding it.
 - If the user still does not have it, Neuron should continue with Mermaid, structured markdown, or JSON diagram specs instead of blocking.
 
-## What's new in v0.2.0
+## What's new in v0.2.1
 
 Neuron V2 expands the original project evaluator into a 4-agent pipeline:
 

@@ -98,8 +98,8 @@ async function copyMarkdownFiles(sourceDir, targetDir) {
 
 function printUsage(exitCode) {
   console.log("Usage:");
-  console.log("  npx neuron-cc@latest --claude --global");
-  console.log("  npx neuron-cc@latest --claude --local");
+  console.log("  npx @kikompg/neuron-cc@latest --claude --global");
+  console.log("  npx @kikompg/neuron-cc@latest --claude --local");
   console.log("");
   console.log("Options:");
   console.log("  --claude   Install Neuron into the Claude Code command/agent structure");
