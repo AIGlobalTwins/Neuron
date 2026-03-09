@@ -1,14 +1,34 @@
 # Neuron
 
-Neuron is a reusable Claude Code plugin for **process discovery, capability routing, and automation design**.
+Process discovery and automation orchestration for Claude Code.
 
-Feed it a project brief, repository, or client meeting transcript and Neuron can help you:
-- map the current process (AS-IS),
-- diagnose bottlenecks and automation opportunities,
-- recommend the best available agents / plugins / MCP tools,
-- design a realistic future-state process (TO-BE).
+## Install
 
-This is not just a tool recommender. It is a lightweight delivery framework for discovery and automation projects.
+```bash
+npx @kikompg/neuron-cc@latest --claude --global
+```
+
+## Update
+
+```bash
+npx @kikompg/neuron-cc@latest --update
+```
+
+## What it does
+
+- Maps AS-IS processes from meeting transcripts
+- Identifies automation opportunities
+- Recommends the best agents, plugins and connectors
+- Designs TO-BE workflows
+- Falls back gracefully when tools are missing
+
+## Main command
+
+```text
+/neuron
+```
+
+Neuron is a reusable Claude Code plugin for process discovery, capability routing, and automation design.
 
 ## Capability routing model
 
@@ -240,11 +260,18 @@ Local install in the current project:
 npx @kikompg/neuron-cc@latest --claude --local
 ```
 
+Update an existing installation:
+
+```bash
+npx @kikompg/neuron-cc@latest --update
+```
+
 What the installer does:
 - copies commands into `~/.claude/commands/` or `./.claude/commands/`
 - copies agents into `~/.claude/agents/` or `./.claude/agents/`
 - ensures `/neuron` is available in Claude Code
 - also installs the direct aliases `/neuron-avaliar-projeto` and `/neuron-analisar-reuniao`
+- updates detected Neuron installs when run with `--update`
 
 ### Direct use from GitHub
 
