@@ -1,7 +1,7 @@
 {
   "name": "neuron",
   "version": "0.2.0",
-  "description": "A Claude Code process-discovery and project-orchestration plugin for turning meeting transcripts into AS-IS maps, opportunity analysis, capability routing, and TO-BE automation proposals.",
+  "description": "A Claude Code process-discovery and automation-orchestration plugin for analysing companies, identifying department opportunities, and generating reusable department agents.",
   "author": {
     "name": "Gemeo",
     "url": "https://github.com/AIGlobalTwins"
@@ -22,16 +22,21 @@
   ],
   "components": {
     "agents": [
-      "project-evaluator",
+      "company-analyzer",
       "as-is-mapper",
       "opportunity-analyzer",
-      "to-be-mapper"
+      "project-evaluator",
+      "to-be-mapper",
+      "department-agent-designer",
+      "department-agent-updater"
     ],
     "commands": [
       "neuron-avaliar-projeto",
-      "neuron-analisar-reuniao"
+      "neuron-analisar-reuniao",
+      "neuron-gerar-agents-empresa",
+      "neuron-atualizar-agents-empresa"
     ]
   },
-  "agents": "./agents/",
+  "agents": "./agents/core/",
   "commands": "./commands/"
 }

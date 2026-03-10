@@ -1,90 +1,51 @@
 ---
-description: Analisa uma transcrição de reunião em modo Auto ou Advisor, produzindo AS-IS, oportunidades, capability routing e TO-BE
-argument-hint: [auto|advisor] [transcrição, resumo ou contexto acumulado]
+description: Analisa uma transcrição de reunião e devolve um diagnóstico inicial curto e claro
+argument-hint: [transcrição ou resumo estruturado da reunião]
 ---
 
-Interpreta o primeiro token de `$ARGUMENTS` como modo:
-- `auto`
-- `advisor`
-
-Se nenhum modo for fornecido, assume `auto`.
-
-Executa o pipeline Neuron V2 com base neste input:
+Lê este input e devolve apenas um diagnóstico inicial do processo:
 
 $ARGUMENTS
 
-Ordem obrigatória de trabalho:
-1. Usa o subagent `as-is-mapper` para construir o processo atual.
-2. Usa o subagent `opportunity-analyzer` para diagnosticar gargalos, quick wins e oportunidades.
-3. Usa o subagent `project-evaluator` para construir um capability routing baseado em inventário e separado em `AVAILABLE_NOW`, `RECOMMENDED_TO_ADD` e `FALLBACK_OUTPUTS`.
-4. Usa o subagent `to-be-mapper` para desenhar o processo futuro com pontos de automação, respeitando as capabilities disponíveis e os fallbacks definidos.
-
-## Mode semantics
-
-### Auto mode
-
-Em `auto`, executa o pipeline completo numa só resposta.
-Este é o comportamento por omissão.
-
-### Advisor mode
-
-Em `advisor`, nunca executes os quatro passos de uma vez.
-Executa apenas o próximo passo necessário e termina a resposta aí.
-
-Regras de progressão em `advisor`:
-- Se ainda não existir um resultado AS-IS no contexto, executa apenas o `as-is-mapper`.
-- Se já existir AS-IS mas ainda não existir Opportunity Analysis, executa apenas o `opportunity-analyzer`.
-- Se já existir Opportunity Analysis mas ainda não existir Capability Routing, executa apenas o `project-evaluator`.
-- Se já existir Capability Routing mas ainda não existir TO-BE, executa apenas o `to-be-mapper`.
-- Se já existir TO-BE, não repitas o pipeline completo; resume o estado e sugere o próximo uso lógico do Neuron.
-
-Em `advisor`, assume que o utilizador pode colar resultados anteriores no próximo pedido.
-Por isso, usa os títulos e estruturas do Neuron de forma estável para facilitar a continuação passo a passo.
+Objetivo:
+- não devolver um relatório completo;
+- não correr o pipeline inteiro;
+- não produzir capability routing nesta fase;
+- não produzir TO-BE nesta fase;
+- focar em clareza e utilidade imediata.
 
 Regras obrigatórias:
-- Não inventes passos que não estejam sustentados no input.
-- Se houver ambiguidades, lista-as explicitamente.
-- Não recomendes tools não instaladas ou não listadas como disponíveis dentro de `AVAILABLE_NOW`.
-- Se faltar uma capability importante, coloca-a em `RECOMMENDED_TO_ADD` e mantém o workflow vivo com um `FALLBACK_OUTPUT`.
-- Se não houver tool de diagrama disponível, devolve pelo menos um fallback utilizável, como markdown estruturado, Mermaid ou JSON de especificação.
-- Mantém separadas observações explícitas, inferências fortes e questões em aberto.
-- O TO-BE tem de indicar triggers, inputs, outputs, owner e exceções para cada automação sugerida.
+- máximo 4 secções;
+- sem JSON;
+- sem tabelas;
+- sem capability routing;
+- sem TO-BE;
+- sem lista extensa de riscos;
+- usar linguagem direta e curta;
+- o resumo deve ter 2 a 4 linhas;
+- as oportunidades devem ser práticas e priorizadas por impacto;
+- a recomendação deve dizer qual é o passo mais sensato agora;
+- o próximo passo deve ser uma ação concreta.
 
-Se o modo for `auto`, devolve a resposta final nesta estrutura:
+Se o input estiver incompleto:
+- faz o melhor diagnóstico inicial possível;
+- evita fingir detalhe que não existe;
+- usa a recomendação e o próximo passo para indicar a clarificação mais útil.
 
-# Neuron Discovery Report
+Devolve exatamente nesta estrutura:
 
-## 1. Meeting summary
-## 2. AS-IS process map
-## 3. Opportunity analysis
-## 4. Capability routing
-### 4.1 AVAILABLE_NOW
-### 4.2 RECOMMENDED_TO_ADD
-### 4.3 FALLBACK_OUTPUTS
-## 5. TO-BE process map
-## 6. Top risks / unknowns
-## 7. Recommended next step
+# Neuron
 
-Se o modo for `advisor`, devolve apenas a etapa executada agora e termina com esta estrutura:
+## Resumo
+[2-4 linhas a explicar o processo atual e o principal problema]
 
-# Neuron Advisor
+## Top oportunidades
+1. [oportunidade] — [impacto]
+2. [oportunidade] — [impacto]
+3. [oportunidade] — [impacto]
 
-## 1. Current mode
-Indica explicitamente `Advisor`.
+## Recomendação
+[qual é o passo mais sensato neste momento]
 
-## 2. Completed now
-Indica qual dos quatro passos foi executado nesta resposta.
-
-## 3. Output
-Inclui apenas o output do agente executado agora.
-
-## 4. Why this is the next best step
-Explica porque este era o passo certo neste momento.
-
-## 5. Suggested next step
-Indica exatamente qual o próximo passo do pipeline e sugere ao utilizador que confirme antes de continuar.
-
-## 6. Continue with
-Dá o comando recomendado para a próxima interação, por exemplo:
-- `/neuron-analisar-reuniao advisor [colar output anterior + contexto adicional]`
-- `/neuron analisar-reuniao advisor [colar output anterior + contexto adicional]`
+## Próximo passo
+[uma ação concreta]

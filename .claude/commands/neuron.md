@@ -10,6 +10,8 @@ Interpreta `$ARGUMENTS` como:
 Ações suportadas:
 - `avaliar-projeto`
 - `analisar-reuniao`
+- `gerar-agents-empresa`
+- `atualizar-agents-empresa`
 - `help`
 
 Se a ação for `avaliar-projeto`:
@@ -42,45 +44,42 @@ Devolve exatamente nesta estrutura:
 ## 11. Next best action
 
 Se a ação for `analisar-reuniao`:
-- o primeiro argumento útil depois da ação pode ser o modo:
-  - `auto`
-  - `advisor`
-- se nenhum modo for indicado, assume `auto`;
-- usa os subagents nesta ordem:
-  1. `as-is-mapper`
-  2. `opportunity-analyzer`
-  3. `project-evaluator`
-  4. `to-be-mapper`
-- em `auto`, pode executar o pipeline completo numa só resposta;
-- em `advisor`, executa apenas o próximo passo necessário e termina com recomendação do passo seguinte;
-- em `advisor`, usa o contexto já produzido pelo utilizador para perceber que etapa já foi concluída;
+- lê a transcrição ou resumo da reunião e devolve apenas um diagnóstico inicial;
 - não inventes passos que não estejam sustentados no input;
-- lista ambiguidades explicitamente;
-- não recomendes tools não instaladas ou não listadas como disponíveis dentro de `AVAILABLE_NOW`;
-- se faltar uma capability importante, coloca-a em `RECOMMENDED_TO_ADD` e mantém o workflow vivo com um `FALLBACK_OUTPUT`;
-- se não houver tool de diagrama disponível, devolve pelo menos markdown estruturado, Mermaid ou JSON de especificação;
-- mantém separadas observações explícitas, inferências fortes e questões em aberto;
-- o TO-BE tem de indicar triggers, inputs, outputs, owner e exceções para cada automação sugerida.
+- foca-te no processo atual e nas oportunidades mais óbvias;
+- não devolvas capability routing;
+- não devolvas TO-BE;
+- não devolvas JSON;
+- mantém o output curto e claro.
 
 Devolve exatamente nesta estrutura:
 
-# Neuron Discovery Report
+# Neuron
 
-## 1. Meeting summary
-## 2. AS-IS process map
-## 3. Opportunity analysis
-## 4. Capability routing
-### 4.1 AVAILABLE_NOW
-### 4.2 RECOMMENDED_TO_ADD
-### 4.3 FALLBACK_OUTPUTS
-## 5. TO-BE process map
-## 6. Top risks / unknowns
-## 7. Recommended next step
+## Resumo
+## Top oportunidades
+## Recomendação
+## Próximo passo
+
+Se a ação for `gerar-agents-empresa`:
+- usa `company-analyzer` para identificar departamentos relevantes, desafios e oportunidades;
+- usa `as-is-mapper`, `to-be-mapper` e `opportunity-analyzer` por departamento quando necessário;
+- usa `department-agent-designer` para gerar ficheiros Markdown em `agents/generated/<company-slug>/`;
+- usa a pasta `skills/` como biblioteca de competências reutilizáveis;
+- cria ou atualiza `company-data/<company-slug>/company-context.md`;
+- evita agentes redundantes e prefere consolidar roles semelhantes.
+
+Se a ação for `atualizar-agents-empresa`:
+- lê contexto existente em `company-data/` e `agents/generated/`;
+- identifica apenas os agents afetados;
+- usa `department-agent-updater` para preservar informação validada e integrar novo contexto;
+- evita duplicação e recomenda merge quando houver sobreposição.
 
 Se a ação for `help` ou estiver ausente:
 - explica que o comando disponível no Claude Code é `/neuron`;
 - mostra estes exemplos:
   - `/neuron avaliar-projeto Quero criar um SaaS com auth, billing e automações com IA.`
-  - `/neuron analisar-reuniao auto Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual em leads e follow-ups.`
-  - `/neuron analisar-reuniao advisor Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual em leads e follow-ups.`
+  - `/neuron analisar-reuniao Cliente: consultora imobiliária. Objetivo: reduzir trabalho manual em leads e follow-ups.`
+  - `/neuron gerar-agents-empresa Empresa industrial B2B com equipas de vendas, finanças, RH e operações. [colar contexto]`
+  - `/neuron atualizar-agents-empresa Nova informação da empresa: operações foi dividida entre logística e planeamento. [colar update]`
 - pede ao utilizador que forneça uma destas ações antes do contexto.

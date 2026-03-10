@@ -1,7 +1,7 @@
 {
   "name": "@kikompg/neuron-cc",
   "version": "0.2.2",
-  "description": "Neuron installer and Claude Code capability-routing package.",
+  "description": "Neuron installer and Claude Code company-analysis, process-discovery, and department-agent generation package.",
   "license": "MIT",
   "author": {
     "name": "Gemeo",
@@ -19,8 +19,10 @@
     ".claude/",
     ".claude-plugin/",
     "agents/",
+    "company-data/",
     "commands/",
     "examples/",
+    "skills/",
     "scripts/",
     "README.md",
     "LICENSE"
