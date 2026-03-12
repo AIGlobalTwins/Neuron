@@ -82,7 +82,7 @@ List outputs Neuron can still generate when ideal capabilities are missing.
 - Need:
 - Missing capability:
 - Fallback output Neuron can generate now:
-- Format: markdown / mermaid / json / csv / brief / checklist / other
+- Format: markdown / excalidraw-spec / json / csv / brief / checklist / other
 - Main limitation:
 
 ## Example routing entry
@@ -90,4 +90,4 @@ List outputs Neuron can still generate when ideal capabilities are missing.
 - Need: AS-IS diagram
 - AVAILABLE_NOW: none confirmed
 - RECOMMENDED_TO_ADD: Excalidraw connector
-- FALLBACK_OUTPUT: Mermaid flowchart plus JSON diagram specification
+- FALLBACK_OUTPUT: Detailed Excalidraw-ready diagram specification plus step-by-step markdown report

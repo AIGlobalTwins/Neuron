@@ -25,6 +25,7 @@ npx @kikompg/neuron-cc@latest --update
 - Analyses company context from transcripts or business descriptions
 - Identifies relevant departments, challenges, and automation opportunities
 - Maps AS-IS and TO-BE views for operational domains
+- Produces step-by-step process reports and Excalidraw build specs
 - Generates specialised department agents as Markdown files
 - Updates generated agents when new company information appears
 - Reuses shared skills for process mapping, opportunity analysis, scoping, design, and SOP work
@@ -98,6 +99,24 @@ This step is intentionally short:
 - no capability routing
 - no TO-BE
 - no full report
+
+### Excalidraw artefacts
+
+When AS-IS or TO-BE mapping is used, Neuron should produce:
+- a quick step-by-step report
+- a strict JSON build spec that matches [examples/excalidraw-build-spec-template.json](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/excalidraw-build-spec-template.json)
+
+That build spec can be turned into an Excalidraw file with:
+
+```bash
+node scripts/build-excalidraw.js input-spec.json output.excalidraw.json
+```
+
+The goal is to generate an importable `.excalidraw.json` artefact rather than an abstract diagram description.
+
+Reference files:
+- [examples/excalidraw-build-spec-template.json](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/excalidraw-build-spec-template.json)
+- [examples/excalidraw-output-example.excalidraw.json](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/excalidraw-output-example.excalidraw.json)
 
 ### 2. Generate company department agents
 

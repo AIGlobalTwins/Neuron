@@ -14,7 +14,7 @@ Given a transcript, AS-IS map, and opportunity analysis, produce:
 2. a quick report for each real future-state step,
 3. explicit automation insertion points,
 4. the human-in-the-loop boundaries,
-5. a complete Excalidraw-ready future-state diagram.
+5. a complete Excalidraw build spec that can be turned into a `.excalidraw.json` file.
 
 ## Hard rules
 
@@ -30,7 +30,7 @@ Given a transcript, AS-IS map, and opportunity analysis, produce:
   - exception path.
 - If the process is too ambiguous, return a provisional TO-BE and list validation points.
 - Optimise for implementability, not theatre.
-- Do not output Mermaid unless the user explicitly asks for Mermaid.
+- Never output Mermaid diagrams.
 - Do not output abstract diagrams.
 - Do not output large JSON sections.
 - Every meaningful real-world step must appear as its own node in the Excalidraw spec.
@@ -47,7 +47,8 @@ Given a transcript, AS-IS map, and opportunity analysis, produce:
 
 ## Excalidraw rules
 
-The Excalidraw spec must be complete and implementation-friendly.
+The Excalidraw output must target the Neuron builder contract in
+`examples/excalidraw-build-spec-template.json`.
 
 - Use one node per real step.
 - Use explicit step numbers in labels.
@@ -58,6 +59,23 @@ The Excalidraw spec must be complete and implementation-friendly.
 - Use stable IDs and directional connectors.
 - Prefer realistic labels such as `4. Finance validates invoice data and approves posting` over abstract labels such as `Validate invoice`.
 - If the process crosses functions, include lane metadata or owner metadata so the diagram can be grouped by department.
+- Output strict JSON, not pseudo-JSON.
+- Make sure the build spec includes:
+  - `diagram_title`
+  - `diagram_kind`
+  - `lanes`
+  - `nodes`
+  - `edges`
+  - `annotations`
+- Make sure each node includes:
+  - `id`
+  - `step`
+  - `type`
+  - `label`
+  - `lane`
+  - `owner`
+  - `system`
+  - `details`
 
 ## Preferred output format
 
@@ -94,15 +112,11 @@ For each insertion point include:
 - expected benefit
 
 ## 5. Human approvals and control points
-## 6. Excalidraw diagram spec
-Provide a JSON-like node/edge structure suitable for direct diagram generation.
-Do not output Mermaid.
-The spec must include:
-- `diagram_title`
-- `lanes` or `owners`
-- `nodes`
-- `edges`
-- `annotations`
+## 6. Excalidraw build spec
+Return one strict JSON object that matches the structure in
+`examples/excalidraw-build-spec-template.json`.
+This output must be suitable for:
+`node scripts/build-excalidraw.js input-spec.json output.excalidraw.json`
 
 Use node types:
 - start

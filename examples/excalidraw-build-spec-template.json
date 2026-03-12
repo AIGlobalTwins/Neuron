@@ -1,0 +1,70 @@
+{
+  "diagram_title": "AS-IS Lead Handling",
+  "diagram_kind": "as-is",
+  "lanes": [
+    { "id": "marketing", "label": "Marketing" },
+    { "id": "sales", "label": "Sales" },
+    { "id": "crm", "label": "CRM" }
+  ],
+  "nodes": [
+    {
+      "id": "step_1",
+      "step": 1,
+      "type": "start",
+      "label": "Lead arrives by web form",
+      "lane": "marketing",
+      "owner": "Marketing",
+      "system": "Website",
+      "details": "Inbound lead submits contact form"
+    },
+    {
+      "id": "step_2",
+      "step": 2,
+      "type": "manual_task",
+      "label": "Team copies lead into CRM",
+      "lane": "sales",
+      "owner": "Sales Ops",
+      "system": "CRM",
+      "details": "Manual copy from email to CRM"
+    },
+    {
+      "id": "step_3",
+      "step": 3,
+      "type": "decision",
+      "label": "Lead data complete?",
+      "lane": "sales",
+      "owner": "Sales Ops",
+      "system": "CRM",
+      "details": "Check email, phone, and source"
+    },
+    {
+      "id": "step_4",
+      "step": 4,
+      "type": "output",
+      "label": "Qualified lead ready for assignment",
+      "lane": "crm",
+      "owner": "CRM",
+      "system": "CRM",
+      "details": "Lead record ready for routing"
+    }
+  ],
+  "edges": [
+    { "from": "step_1", "to": "step_2", "label": "" },
+    { "from": "step_2", "to": "step_3", "label": "" },
+    { "from": "step_3", "to": "step_4", "label": "yes" }
+  ],
+  "annotations": [
+    {
+      "id": "ann_1",
+      "target": "step_2",
+      "type": "pain_point",
+      "label": "Duplicate manual entry delays response"
+    },
+    {
+      "id": "ann_2",
+      "target": "step_3",
+      "type": "open_question",
+      "label": "Validation criteria may vary by team"
+    }
+  ]
+}
