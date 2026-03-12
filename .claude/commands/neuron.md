@@ -26,22 +26,18 @@ Se a ação for `avaliar-projeto`:
 - se faltar uma capability importante, recomenda-a em `RECOMMENDED_TO_ADD` e define o respetivo `FALLBACK_OUTPUT`;
 - se faltar inventário, faz a melhor avaliação possível e assinala a limitação;
 - se o input for curto ou vago, faz uma avaliação provisória com a menor complexidade razoável.
+- mantém o output curto, direto e orientado à decisão;
+- não devolvas classificação longa, taxonomy excessiva, nem listas grandes.
 
 Devolve exatamente nesta estrutura:
 
 # Neuron Evaluation
 
-## 1. Project summary
-## 2. Classification
-## 3. What this project actually needs
-## 4. Capability inventory snapshot
-## 5. AVAILABLE_NOW
-## 6. RECOMMENDED_TO_ADD
-## 7. FALLBACK_OUTPUTS
-## 8. Suggested execution order
-## 9. Capabilities to avoid or defer
-## 10. Gaps and missing context
-## 11. Next best action
+## Resumo
+## O que já existe
+## O que falta
+## Fallback agora
+## Próximo passo
 
 Se a ação for `analisar-reuniao`:
 - lê a transcrição ou resumo da reunião e devolve apenas um diagnóstico inicial;

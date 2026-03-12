@@ -100,6 +100,26 @@ This step is intentionally short:
 - no TO-BE
 - no full report
 
+### 1b. Short project evaluation
+
+Use:
+
+```text
+/neuron avaliar-projeto [contexto]
+```
+
+Output format:
+
+```text
+# Neuron Evaluation
+
+## Resumo
+## O que já existe
+## O que falta
+## Fallback agora
+## Próximo passo
+```
+
 ### Excalidraw artefacts
 
 When AS-IS or TO-BE mapping is used, Neuron should produce:
