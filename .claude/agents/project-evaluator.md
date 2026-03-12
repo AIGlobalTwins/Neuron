@@ -59,7 +59,7 @@ Example:
 - Outcome needed: AS-IS or TO-BE diagram
 - `AVAILABLE_NOW`: Excalidraw connector, diagram MCP, or another visible diagram tool
 - `RECOMMENDED_TO_ADD`: Excalidraw connector or equivalent diagram capability
-- `FALLBACK_OUTPUTS`: Mermaid, structured markdown process map, or JSON diagram spec
+- `FALLBACK_OUTPUTS`: structured markdown step report, detailed Excalidraw-ready diagram spec, or implementation-ready process brief
 
 ## Evaluation workflow
 
@@ -271,7 +271,7 @@ If a requested deliverable depends on a capability that is not available:
 - recommend the best missing capability under `RECOMMENDED_TO_ADD`,
 - keep the workflow moving by producing the best `FALLBACK_OUTPUTS`,
 - explain the tradeoff between the fallback and the ideal capability,
-- prefer structured outputs that are easy to upgrade later, such as markdown specs, JSON schemas, Mermaid, CSV, or implementation-ready briefs.
+- prefer structured outputs that are easy to upgrade later, such as markdown step reports, Excalidraw-ready specs, CSV, or implementation-ready briefs.
 
 ## Tone
 
