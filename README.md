@@ -148,10 +148,11 @@ Use:
 
 What it does:
 1. analyses the company
-2. identifies relevant departments
-3. maps department AS-IS and TO-BE summaries
-4. identifies department automation opportunities
-5. creates department agents in `agents/generated/<company-slug>/`
+2. creates a canonical company memory in `company-data/<company-slug>/company-context.md`
+3. identifies relevant departments
+4. maps department AS-IS and TO-BE summaries
+5. identifies department automation opportunities
+6. creates department agents in `agents/generated/<company-slug>/`
 
 ### 3. Update generated agents
 
@@ -162,11 +163,12 @@ Use:
 ```
 
 What it does:
-1. reads current company context
+1. reads canonical company memory
 2. identifies affected agents
-3. updates only the necessary files
-4. preserves validated information
-5. avoids duplicate department agents
+3. updates company memory first
+4. updates only the necessary files
+5. preserves validated information
+6. avoids duplicate department agents
 
 ## Generated agent model
 
@@ -198,6 +200,18 @@ This context is the base for:
 - agent generation
 - agent updates
 - preserving validated information over time
+
+Neuron now treats this file as a canonical company memory, not a loose summary.
+That memory should separate:
+- validated facts
+- working hypotheses
+- departments
+- existing generated agents
+- decisions made
+- open questions
+
+Reference template:
+- [examples/company-memory-template.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/company-memory-template.md)
 
 ## Guardrails
 

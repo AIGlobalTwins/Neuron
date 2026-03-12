@@ -11,11 +11,12 @@ Fluxo obrigatório:
 1. Lê o contexto existente em `company-data/<company-slug>/` quando existir.
 2. Identifica quais departments e agents são afetados pela nova informação.
 3. Usa `department-agent-updater` para atualizar os ficheiros relevantes.
-4. Atualiza `company-data/<company-slug>/company-context.md` com o novo contexto validado.
+4. Atualiza `company-data/<company-slug>/company-context.md` como memória canónica, preservando factos validados e hipóteses separadas.
 
 Regras obrigatórias:
 - preserva informação validada;
 - adiciona novo contexto sem destruir contexto útil existente;
+- mantém `company-context.md` como source of truth para departments e agents existentes;
 - não cries duplicados de agents existentes;
 - se detectares sobreposição entre agents, recomenda merge em vez de duplicação;
 - cria um novo agent apenas quando o novo contexto justificar um novo domínio operacional.

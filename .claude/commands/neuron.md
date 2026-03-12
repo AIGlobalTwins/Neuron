@@ -62,13 +62,15 @@ Se a ação for `gerar-agents-empresa`:
 - usa `as-is-mapper`, `to-be-mapper` e `opportunity-analyzer` por departamento quando necessário;
 - usa `department-agent-designer` para gerar ficheiros Markdown em `agents/generated/<company-slug>/`;
 - usa a pasta `skills/` como biblioteca de competências reutilizáveis;
-- cria ou atualiza `company-data/<company-slug>/company-context.md`;
+- cria ou atualiza `company-data/<company-slug>/company-context.md` como memória canónica da empresa;
+- usa `company-context.md` como source of truth para departments, hipóteses, decisões e agents existentes;
 - evita agentes redundantes e prefere consolidar roles semelhantes.
 
 Se a ação for `atualizar-agents-empresa`:
 - lê contexto existente em `company-data/` e `agents/generated/`;
 - identifica apenas os agents afetados;
 - usa `department-agent-updater` para preservar informação validada e integrar novo contexto;
+- atualiza primeiro a memória canónica da empresa e só depois os agents afetados;
 - evita duplicação e recomenda merge quando houver sobreposição.
 
 Se a ação for `help` ou estiver ausente:

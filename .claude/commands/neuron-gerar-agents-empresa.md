@@ -13,6 +13,7 @@ Fluxo obrigatório:
 3. Para cada departamento relevante, usa `to-be-mapper` apenas para desenhar uma visão futura operacional sucinta.
 4. Usa `opportunity-analyzer` para listar oportunidades de automação por departamento.
 5. Usa `department-agent-designer` para criar um agent Markdown para cada departamento que realmente precise de melhoria operacional.
+6. Guarda primeiro uma memória canónica da empresa em `company-data/<company-slug>/company-context.md` e usa-a como source of truth para os agents.
 
 Regras obrigatórias:
 - cria ficheiros apenas quando existe justificação operacional;
@@ -20,6 +21,8 @@ Regras obrigatórias:
 - prefere um agent forte por departamento a vários agents redundantes;
 - guarda os agents em `agents/generated/<company-slug>/`;
 - guarda contexto reutilizável da empresa em `company-data/<company-slug>/`;
+- trata `company-context.md` como memória canónica, não como resumo solto;
+- separa sempre factos validados de hipóteses de trabalho;
 - preserva nomes estáveis de ficheiro, por exemplo `sales-agent.md`, `finance-agent.md`;
 - se um department agent não for necessário, explica porquê.
 
