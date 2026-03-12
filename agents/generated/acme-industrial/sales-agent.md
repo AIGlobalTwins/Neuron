@@ -1,6 +1,9 @@
 # name
 sales-agent
 
+# canonical key
+sales
+
 # department
 Sales
 

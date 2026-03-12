@@ -67,6 +67,7 @@ Return the canonical Markdown file content for `company-context.md` using this s
 ## Departments
 For each department include:
 - status: confirmed / inferred
+- canonical_key
 - responsibilities
 - dependencies
 - current pain points

@@ -27,6 +27,7 @@
 
 ### <department-name>
 - status: confirmed / inferred
+- canonical_key:
 - responsibilities:
 - dependencies:
 - current pain points:
@@ -47,6 +48,7 @@
 
 ## Existing generated agents
 - department:
+  canonical_key:
   file:
   status:
   notes:

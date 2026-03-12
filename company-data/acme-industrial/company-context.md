@@ -36,6 +36,7 @@
 
 ### Sales
 - status: confirmed
+- canonical_key: sales
 - responsibilities: lead qualification, quote follow-up, CRM hygiene, handoff to operations
 - dependencies: Operations, Finance
 - current pain points: duplicated updates, weak handoff context, inconsistent next-step ownership
@@ -44,6 +45,7 @@
 
 ### Finance
 - status: confirmed
+- canonical_key: finance
 - responsibilities: invoice follow-up, payment visibility, finance handoff support
 - dependencies: Sales, Operations
 - current pain points: delayed invoice follow-up, fragmented status visibility
@@ -52,6 +54,7 @@
 
 ### HR
 - status: confirmed
+- canonical_key: hr
 - responsibilities: onboarding coordination, internal people-process follow-up
 - dependencies: Operations
 - current pain points: onboarding tracked informally, weak process visibility
@@ -60,6 +63,7 @@
 
 ### Operations
 - status: confirmed
+- canonical_key: operations
 - responsibilities: execution readiness, quote-to-delivery handoff, coordination after commercial approval
 - dependencies: Sales, Finance
 - current pain points: inconsistent handoff data, delays before execution starts
@@ -84,18 +88,22 @@
 
 ## Existing generated agents
 - department: Sales
+  canonical_key: sales
   file: agents/generated/acme-industrial/sales-agent.md
   status: generated
   notes: active sales operations support agent
 - department: Finance
+  canonical_key: finance
   file: agents/generated/acme-industrial/finance-agent.md
   status: generated
   notes: finance coordination and receivables support
 - department: HR
+  canonical_key: hr
   file: agents/generated/acme-industrial/hr-agent.md
   status: generated
   notes: onboarding and HR operations support
 - department: Operations
+  canonical_key: operations
   file: agents/generated/acme-industrial/operations-agent.md
   status: generated
   notes: execution readiness and handoff support

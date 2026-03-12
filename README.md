@@ -174,6 +174,7 @@ What it does:
 
 Each generated agent should contain:
 - name
+- canonical key
 - department
 - purpose
 - company context
@@ -219,6 +220,11 @@ Reference template:
 - do not duplicate overlapping departments or roles
 - create department agents only when there is clear operational need
 - prefer updating an existing agent over creating a new one
+- resolve departments to stable canonical keys before creating files
+- keep deterministic file names such as `sales-agent.md`, `finance-agent.md`, `operations-agent.md`
+
+Reference rules:
+- [examples/department-agent-rules.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/department-agent-rules.md)
 
 ## Example commands
 

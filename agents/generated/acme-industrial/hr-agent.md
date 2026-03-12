@@ -1,6 +1,9 @@
 # name
 hr-agent
 
+# canonical key
+hr
+
 # department
 HR
 

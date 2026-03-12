@@ -1,6 +1,9 @@
 # name
 finance-agent
 
+# canonical key
+finance
+
 # department
 Finance
 

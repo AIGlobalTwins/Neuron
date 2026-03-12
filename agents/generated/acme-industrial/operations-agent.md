@@ -1,6 +1,9 @@
 # name
 operations-agent
 
+# canonical key
+operations
+
 # department
 Operations
 

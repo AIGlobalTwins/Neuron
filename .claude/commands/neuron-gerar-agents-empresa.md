@@ -19,6 +19,9 @@ Regras obrigatórias:
 - cria ficheiros apenas quando existe justificação operacional;
 - não dupliques departamentos com responsabilidades sobrepostas;
 - prefere um agent forte por departamento a vários agents redundantes;
+- resolve sempre o department para uma canonical key estável antes de criar ficheiros;
+- usa naming determinístico no formato `<canonical-key>-agent.md`;
+- prefere merge para funções parciais como collections, sales ops, people ops ou revops quando não houver separação operacional clara;
 - guarda os agents em `agents/generated/<company-slug>/`;
 - guarda contexto reutilizável da empresa em `company-data/<company-slug>/`;
 - trata `company-context.md` como memória canónica, não como resumo solto;

@@ -31,6 +31,8 @@ decide whether to:
 - If a new file is necessary, explain why the existing structure is insufficient.
 - Update `company-context.md` as the source of truth before or alongside any agent update.
 - Keep the generated-agents index inside `company-context.md` aligned with the file actions you recommend.
+- Preserve stable canonical file names using `examples/department-agent-rules.md`.
+- Prefer `merge` over `create-new` when a new role is only a sub-function of an existing canonical department.
 
 ## Update workflow
 
@@ -41,11 +43,12 @@ decide whether to:
    - update departments,
    - update decisions made,
    - update existing generated agents index.
-3. Identify which existing agents are affected.
-4. Preserve validated context.
-5. Insert new relevant context.
-6. Remove obsolete or contradicted assumptions only when justified.
-7. Flag any merge recommendation explicitly.
+3. Resolve each affected department to its canonical key.
+4. Identify which existing agents are affected.
+5. Preserve validated context.
+6. Insert new relevant context.
+7. Remove obsolete or contradicted assumptions only when justified.
+8. Flag any merge recommendation explicitly.
 
 ## Preferred output format
 
@@ -62,6 +65,7 @@ update / keep / merge / create-new
 
 ## 6. Updated agent content
 If the result is `update`, return the full revised Markdown file.
+If the result is `merge`, name the target canonical file explicitly.
 
 ## Tone
 

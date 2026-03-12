@@ -19,6 +19,7 @@ Regras obrigatórias:
 - mantém `company-context.md` como source of truth para departments e agents existentes;
 - não cries duplicados de agents existentes;
 - se detectares sobreposição entre agents, recomenda merge em vez de duplicação;
+- mantém naming determinístico por canonical key;
 - cria um novo agent apenas quando o novo contexto justificar um novo domínio operacional.
 
 Deliverables mínimos:

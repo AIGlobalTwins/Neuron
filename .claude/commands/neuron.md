@@ -64,6 +64,8 @@ Se a ação for `gerar-agents-empresa`:
 - usa a pasta `skills/` como biblioteca de competências reutilizáveis;
 - cria ou atualiza `company-data/<company-slug>/company-context.md` como memória canónica da empresa;
 - usa `company-context.md` como source of truth para departments, hipóteses, decisões e agents existentes;
+- resolve departments para canonical keys estáveis antes de criar ou atualizar ficheiros;
+- usa naming determinístico no formato `<canonical-key>-agent.md`;
 - evita agentes redundantes e prefere consolidar roles semelhantes.
 
 Se a ação for `atualizar-agents-empresa`:
@@ -71,6 +73,7 @@ Se a ação for `atualizar-agents-empresa`:
 - identifica apenas os agents afetados;
 - usa `department-agent-updater` para preservar informação validada e integrar novo contexto;
 - atualiza primeiro a memória canónica da empresa e só depois os agents afetados;
+- preserva naming determinístico por canonical key;
 - evita duplicação e recomenda merge quando houver sobreposição.
 
 Se a ação for `help` ou estiver ausente:
