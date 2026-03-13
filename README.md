@@ -20,6 +20,15 @@ npx @kikompg/neuron-cc@latest --update
 /neuron
 ```
 
+Additional direct commands:
+
+```text
+/neuron-avaliar-projeto
+/neuron-analisar-reuniao
+/neuron-gerar-agents-empresa
+/neuron-atualizar-agents-empresa
+```
+
 ## What it does
 
 - Analyses company context from transcripts or business descriptions

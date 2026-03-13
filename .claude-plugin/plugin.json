@@ -1,7 +1,7 @@
 {
   "name": "neuron",
   "version": "0.2.0",
-  "description": "A Claude Code process-discovery and automation-orchestration plugin for analysing companies, identifying department opportunities, and generating reusable department agents.",
+  "description": "A Claude Code process-discovery, capability-routing, and department-agent generation plugin for operational analysis and automation design.",
   "author": {
     "name": "Gemeo",
     "url": "https://github.com/AIGlobalTwins"

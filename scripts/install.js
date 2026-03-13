@@ -74,13 +74,13 @@ async function main() {
     summary.installedAgents.forEach((file) =>
       console.log(`- ${path.join(summary.targetClaudeRoot, "agents", file)}`),
     );
-  }
 
-  console.log("");
-  console.log("Claude Code entrypoints:");
-  console.log("- /neuron");
-  console.log("- /neuron-avaliar-projeto");
-  console.log("- /neuron-analisar-reuniao");
+    console.log("");
+    console.log("Slash commands available:");
+    summary.installedCommands
+      .map(toSlashCommand)
+      .forEach((command) => console.log(`- ${command}`));
+  }
 }
 
 async function ensureDirectory(dirPath) {
@@ -189,6 +189,10 @@ function printUsage(exitCode) {
   console.log("  --update   Update an existing Neuron install. Without target flags, updates detected installs.");
   console.log("  --help     Show this message");
   process.exit(exitCode);
+}
+
+function toSlashCommand(fileName) {
+  return `/${fileName.replace(/\.md$/, "")}`;
 }
 
 main().catch((error) => {
