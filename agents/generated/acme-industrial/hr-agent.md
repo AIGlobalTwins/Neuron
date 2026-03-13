@@ -43,6 +43,18 @@ HR tasks are tracked informally, which creates missed steps and poor visibility 
 - Gmail
 - Google Sheets
 
+# core skills
+- [process-mapping](../../skills/process-mapping.md)
+- [sop-generation](../../skills/sop-generation.md)
+
+# optional skills
+- [opportunity-identification](../../skills/opportunity-identification.md)
+
+# skill usage
+- use `process-mapping` when onboarding or recurring HR routines are still informal or inconsistent
+- use `sop-generation` when HR workflows are validated and need repeatable execution
+- use `opportunity-identification` when the team wants to prioritise friction points in onboarding or recurring follow-up
+
 # update rules
 - preserve validated HR policy
 - only extend responsibilities when the HR process is confirmed

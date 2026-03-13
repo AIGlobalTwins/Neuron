@@ -33,6 +33,8 @@ decide whether to:
 - Keep the generated-agents index inside `company-context.md` aligned with the file actions you recommend.
 - Preserve stable canonical file names using `examples/department-agent-rules.md`.
 - Prefer `merge` over `create-new` when a new role is only a sub-function of an existing canonical department.
+- Preserve existing skill assignments when they are still valid.
+- Reassign skills only when the department responsibilities or workflow maturity materially change.
 
 ## Update workflow
 
@@ -49,6 +51,7 @@ decide whether to:
 6. Insert new relevant context.
 7. Remove obsolete or contradicted assumptions only when justified.
 8. Flag any merge recommendation explicitly.
+9. Review core and optional skills against `examples/department-skill-rules.md`.
 
 ## Preferred output format
 

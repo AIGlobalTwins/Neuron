@@ -23,6 +23,9 @@ Given canonical company memory, a department profile, current-state process note
 - Resolve the department to a stable canonical key using `examples/department-agent-rules.md`.
 - Use a stable file identity in the form `<canonical-key>-agent.md`.
 - If the department should merge into another canonical agent, do not invent a new file.
+- Assign reusable skills using `examples/department-skill-rules.md`.
+- Only reference skills that exist in `skills/`.
+- Reference assigned skills as Markdown links to the corresponding file in `skills/`.
 
 ## Agent file requirements
 
@@ -38,6 +41,9 @@ Every generated department agent must contain:
 - outputs
 - responsibilities
 - useful tools
+- core skills
+- optional skills
+- skill usage
 - update rules
 
 ## Deterministic generation rules
@@ -46,6 +52,8 @@ Every generated department agent must contain:
 - If the department is a sub-function, first test whether it should merge into an existing canonical agent.
 - Do not create variants such as `sales-ops-agent.md`, `finance-ops-agent.md`, or `ops-2-agent.md` unless the distinction is explicitly validated and operationally necessary.
 - If the correct action is merge, return no new agent content and state the merge target instead.
+- Keep the skill stack lean. Do not add skills that do not materially change agent behaviour.
+- For each assigned skill, make clear when the agent should activate it.
 
 ## Preferred output format
 

@@ -184,6 +184,9 @@ Each generated agent should contain:
 - outputs
 - responsibilities
 - useful tools
+- core skills
+- optional skills
+- skill usage
 - update rules
 
 Example files:
@@ -225,6 +228,7 @@ Reference template:
 
 Reference rules:
 - [examples/department-agent-rules.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/department-agent-rules.md)
+- [examples/department-skill-rules.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/department-skill-rules.md)
 
 ## Example commands
 

@@ -44,6 +44,18 @@ Finance follow-up is slowed by fragmented records and manual status updates acro
 - Gmail
 - Google Sheets
 
+# core skills
+- [opportunity-identification](../../skills/opportunity-identification.md)
+- [automation-scoping](../../skills/automation-scoping.md)
+
+# optional skills
+- [sop-generation](../../skills/sop-generation.md)
+
+# skill usage
+- use `opportunity-identification` when invoice follow-up bottlenecks or reconciliation pain points need prioritisation
+- use `automation-scoping` when defining payment-status updates, overdue follow-up, or finance handoff automations
+- use `sop-generation` when receivables and invoice follow-up become stable enough to standardise
+
 # update rules
 - preserve validated finance policy
 - update escalation logic only with confirmed process changes

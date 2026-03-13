@@ -46,6 +46,18 @@ Acme Industrial manages leads across Gmail, CRM, and spreadsheets, with visible 
 - Gmail
 - Google Sheets
 
+# core skills
+- [opportunity-identification](../../skills/opportunity-identification.md)
+- [automation-scoping](../../skills/automation-scoping.md)
+
+# optional skills
+- [process-mapping](../../skills/process-mapping.md)
+
+# skill usage
+- use `opportunity-identification` when leads stall, handoffs degrade, or the team needs a prioritised shortlist of issues
+- use `automation-scoping` when defining how lead capture, qualification, or follow-up should be automated
+- use `process-mapping` when the current commercial flow is still unclear or inconsistent across people
+
 # update rules
 - preserve validated commercial stages
 - add new qualification logic only when confirmed

@@ -44,6 +44,18 @@ Operations receives inconsistent context from sales and finance, causing delays 
 - shared drive
 - Google Sheets
 
+# core skills
+- [process-mapping](../../skills/process-mapping.md)
+- [automation-scoping](../../skills/automation-scoping.md)
+
+# optional skills
+- [to-be-design](../../skills/to-be-design.md)
+
+# skill usage
+- use `process-mapping` when handoffs, readiness checks, or execution blockers are still unclear
+- use `automation-scoping` when defining how handoffs or execution visibility should be automated
+- use `to-be-design` when the current operational flow is understood and the team is ready to redesign it
+
 # update rules
 - preserve validated operational stages
 - reflect new handoff rules only when confirmed
