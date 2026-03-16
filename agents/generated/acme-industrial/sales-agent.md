@@ -58,6 +58,16 @@ Acme Industrial manages leads across Gmail, CRM, and spreadsheets, with visible 
 - use `automation-scoping` when defining how lead capture, qualification, or follow-up should be automated
 - use `process-mapping` when the current commercial flow is still unclear or inconsistent across people
 
+# department improvement needs
+- clearer lead qualification rules
+- better CRM hygiene discipline
+- stronger handoff data before work moves to operations
+
+# priority improvements
+1. define a single qualification standard
+2. reduce duplicate updates between CRM, inbox, and spreadsheets
+3. standardise the sales-to-operations handoff
+
 # update rules
 - preserve validated commercial stages
 - add new qualification logic only when confirmed

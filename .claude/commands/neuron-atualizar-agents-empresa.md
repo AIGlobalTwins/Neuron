@@ -12,6 +12,7 @@ Fluxo obrigatório:
 2. Identifica quais departments e agents são afetados pela nova informação.
 3. Usa `department-agent-updater` para atualizar os ficheiros relevantes.
 4. Atualiza `company-data/<company-slug>/company-context.md` como memória canónica, preservando factos validados e hipóteses separadas.
+5. Regenera `ceo-agent.md` para refletir o novo estado dos department agents.
 
 Regras obrigatórias:
 - preserva informação validada;
@@ -26,3 +27,4 @@ Deliverables mínimos:
 - lista de agents afetados;
 - ação tomada por agent: keep / update / merge / create-new;
 - ficheiros Markdown atualizados quando aplicável.
+- `ceo-agent.md` atualizado quando houver mudanças relevantes.

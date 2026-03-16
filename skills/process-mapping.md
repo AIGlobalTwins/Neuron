@@ -1,7 +1,7 @@
 # Process Mapping
 
 ## Purpose
-Turn discovery material into a clear current-state process summary.
+Turn discovery material into a clear operational workflow summary.
 
 ## Use when
 - the process is still unclear
@@ -9,7 +9,7 @@ Turn discovery material into a clear current-state process summary.
 - the team needs a shared operational view
 
 ## Output
-- short AS-IS summary
+- short workflow summary
 - ordered process steps
 - handoffs, approvals, and pain points
 

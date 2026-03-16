@@ -4,6 +4,8 @@ const fs = require("fs/promises");
 const os = require("os");
 const path = require("path");
 
+const LEGACY_NEURON_AGENT_FILES = ["as-is-mapper.md", "to-be-mapper.md"];
+
 async function main() {
   const args = new Set(process.argv.slice(2));
   const wantsUpdate = args.has("--update");
@@ -51,6 +53,8 @@ async function main() {
 
     const installedCommands = await copyMarkdownFiles(sourceCommandsDir, targetCommandsDir);
     const installedAgents = await copyMarkdownFiles(sourceAgentsDir, targetAgentsDir);
+    await removeManagedStaleFiles(targetCommandsDir, installedCommands, []);
+    await removeManagedStaleFiles(targetAgentsDir, installedAgents, LEGACY_NEURON_AGENT_FILES);
 
     summaries.push({
       targetClaudeRoot,
@@ -114,6 +118,27 @@ async function copyMarkdownFiles(sourceDir, targetDir) {
 
   files.sort();
   return files;
+}
+
+async function removeManagedStaleFiles(targetDir, installedFiles, legacyManagedFiles) {
+  const managedNames = new Set([...installedFiles, ...legacyManagedFiles]);
+
+  for (const fileName of legacyManagedFiles) {
+    if (installedFiles.includes(fileName)) {
+      continue;
+    }
+
+    const filePath = path.join(targetDir, fileName);
+    try {
+      await fs.unlink(filePath);
+    } catch (error) {
+      if (error.code !== "ENOENT") {
+        throw error;
+      }
+    }
+  }
+
+  return managedNames;
 }
 
 async function resolveTargets({

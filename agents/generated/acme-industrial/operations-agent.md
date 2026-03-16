@@ -49,12 +49,22 @@ Operations receives inconsistent context from sales and finance, causing delays 
 - [automation-scoping](../../skills/automation-scoping.md)
 
 # optional skills
-- [to-be-design](../../skills/to-be-design.md)
+- [sop-generation](../../skills/sop-generation.md)
 
 # skill usage
 - use `process-mapping` when handoffs, readiness checks, or execution blockers are still unclear
 - use `automation-scoping` when defining how handoffs or execution visibility should be automated
-- use `to-be-design` when the current operational flow is understood and the team is ready to redesign it
+- use `sop-generation` when operational checks and handoff routines become stable enough to standardise
+
+# department improvement needs
+- stronger handoff quality from upstream teams
+- clearer execution readiness checks
+- better visibility on blockers before work starts
+
+# priority improvements
+1. standardise incoming handoff requirements
+2. define a repeatable readiness checklist
+3. improve blocker visibility before execution starts
 
 # update rules
 - preserve validated operational stages

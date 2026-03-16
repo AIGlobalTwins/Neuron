@@ -44,7 +44,6 @@ Se a ação for `analisar-reuniao`:
 - não inventes passos que não estejam sustentados no input;
 - foca-te no processo atual e nas oportunidades mais óbvias;
 - não devolvas capability routing;
-- não devolvas TO-BE;
 - não devolvas JSON;
 - mantém o output curto e claro.
 
@@ -59,8 +58,9 @@ Devolve exatamente nesta estrutura:
 
 Se a ação for `gerar-agents-empresa`:
 - usa `company-analyzer` para identificar departamentos relevantes, desafios e oportunidades;
-- usa `as-is-mapper`, `to-be-mapper` e `opportunity-analyzer` por departamento quando necessário;
+- usa `opportunity-analyzer` por departamento para identificar necessidades de melhoria;
 - usa `department-agent-designer` para gerar ficheiros Markdown em `agents/generated/<company-slug>/`;
+- usa `ceo-agent-designer` para gerar `ceo-agent.md` com o report consolidado dos department agents;
 - usa a pasta `skills/` como biblioteca de competências reutilizáveis;
 - cria ou atualiza `company-data/<company-slug>/company-context.md` como memória canónica da empresa;
 - usa `company-context.md` como source of truth para departments, hipóteses, decisões e agents existentes;
@@ -73,6 +73,7 @@ Se a ação for `atualizar-agents-empresa`:
 - identifica apenas os agents afetados;
 - usa `department-agent-updater` para preservar informação validada e integrar novo contexto;
 - atualiza primeiro a memória canónica da empresa e só depois os agents afetados;
+- regenera o `ceo-agent.md` quando qualquer department agent mudar;
 - preserva naming determinístico por canonical key;
 - evita duplicação e recomenda merge quando houver sobreposição.
 

@@ -9,11 +9,10 @@ $ARGUMENTS
 
 Fluxo obrigatório:
 1. Usa `company-analyzer` para identificar empresa, departamentos, desafios e oportunidades.
-2. Para cada departamento relevante, usa `as-is-mapper` para resumir o estado atual.
-3. Para cada departamento relevante, usa `to-be-mapper` apenas para desenhar uma visão futura operacional sucinta.
-4. Usa `opportunity-analyzer` para listar oportunidades de automação por departamento.
-5. Usa `department-agent-designer` para criar um agent Markdown para cada departamento que realmente precise de melhoria operacional.
-6. Guarda primeiro uma memória canónica da empresa em `company-data/<company-slug>/company-context.md` e usa-a como source of truth para os agents.
+2. Usa `opportunity-analyzer` para listar oportunidades e necessidades de melhoria por departamento.
+3. Usa `department-agent-designer` para criar um agent Markdown para cada departamento que realmente precise de melhoria operacional.
+4. Usa `ceo-agent-designer` para criar um `ceo-agent.md` que sintetiza a análise de todos os department agents.
+5. Guarda primeiro uma memória canónica da empresa em `company-data/<company-slug>/company-context.md` e usa-a como source of truth para os agents.
 
 Regras obrigatórias:
 - cria ficheiros apenas quando existe justificação operacional;
@@ -27,9 +26,11 @@ Regras obrigatórias:
 - trata `company-context.md` como memória canónica, não como resumo solto;
 - separa sempre factos validados de hipóteses de trabalho;
 - preserva nomes estáveis de ficheiro, por exemplo `sales-agent.md`, `finance-agent.md`;
+- cria também `ceo-agent.md` em `agents/generated/<company-slug>/`;
 - se um department agent não for necessário, explica porquê.
 
 Deliverables mínimos:
 - `company-data/<company-slug>/company-context.md`
 - um ou mais ficheiros em `agents/generated/<company-slug>/`
+- `agents/generated/<company-slug>/ceo-agent.md`
 - resumo final com departamentos gerados e rationale

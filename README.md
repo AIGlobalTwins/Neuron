@@ -1,6 +1,6 @@
 # Neuron
 
-Process discovery, automation orchestration, and department-agent generation for Claude Code.
+Process discovery, capability routing, and department-agent generation for Claude Code.
 
 ## Install
 
@@ -33,9 +33,8 @@ Additional direct commands:
 
 - Analyses company context from transcripts or business descriptions
 - Identifies relevant departments, challenges, and automation opportunities
-- Maps AS-IS and TO-BE views for operational domains
-- Produces step-by-step process reports and Excalidraw build specs
 - Generates specialised department agents as Markdown files
+- Generates a CEO-facing agent that consolidates department improvement needs
 - Updates generated agents when new company information appears
 - Reuses shared skills for process mapping, opportunity analysis, scoping, design, and SOP work
 
@@ -46,12 +45,11 @@ neuron/
 ├── agents/
 │   ├── core/
 │   │   ├── company-analyzer.md
-│   │   ├── as-is-mapper.md
 │   │   ├── opportunity-analyzer.md
 │   │   ├── project-evaluator.md
-│   │   ├── to-be-mapper.md
 │   │   ├── department-agent-designer.md
-│   │   └── department-agent-updater.md
+│   │   ├── department-agent-updater.md
+│   │   └── ceo-agent-designer.md
 │   └── generated/
 │       └── acme-industrial/
 ├── skills/
@@ -67,19 +65,17 @@ neuron/
 ## Core agents
 
 - `company-analyzer` -> identifies company context, departments, and agent candidates
-- `as-is-mapper` -> summarises current-state process reality
 - `opportunity-analyzer` -> identifies operational and automation opportunities
 - `project-evaluator` -> routes work across available capabilities and fallbacks
-- `to-be-mapper` -> defines future-state process direction
 - `department-agent-designer` -> generates department-specific Markdown agents
 - `department-agent-updater` -> updates existing generated agents without duplication
+- `ceo-agent-designer` -> generates a CEO-facing synthesis agent from all department agents
 
 ## Reusable skills
 
 - [process-mapping](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/process-mapping.md)
 - [opportunity-identification](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-identification.md)
 - [automation-scoping](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/automation-scoping.md)
-- [to-be-design](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/to-be-design.md)
 - [sop-generation](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/sop-generation.md)
 
 ## Main workflows
@@ -106,7 +102,6 @@ Output format:
 This step is intentionally short:
 - no JSON
 - no capability routing
-- no TO-BE
 - no full report
 
 ### 1b. Short project evaluation
@@ -129,24 +124,6 @@ Output format:
 ## Próximo passo
 ```
 
-### Excalidraw artefacts
-
-When AS-IS or TO-BE mapping is used, Neuron should produce:
-- a quick step-by-step report
-- a strict JSON build spec that matches [examples/excalidraw-build-spec-template.json](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/excalidraw-build-spec-template.json)
-
-That build spec can be turned into an Excalidraw file with:
-
-```bash
-node scripts/build-excalidraw.js input-spec.json output.excalidraw.json
-```
-
-The goal is to generate an importable `.excalidraw.json` artefact rather than an abstract diagram description.
-
-Reference files:
-- [examples/excalidraw-build-spec-template.json](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/excalidraw-build-spec-template.json)
-- [examples/excalidraw-output-example.excalidraw.json](/Users/daniloguerreiro/Desktop/Neuron/neuron/examples/excalidraw-output-example.excalidraw.json)
-
 ### 2. Generate company department agents
 
 Use:
@@ -159,9 +136,9 @@ What it does:
 1. analyses the company
 2. creates a canonical company memory in `company-data/<company-slug>/company-context.md`
 3. identifies relevant departments
-4. maps department AS-IS and TO-BE summaries
-5. identifies department automation opportunities
-6. creates department agents in `agents/generated/<company-slug>/`
+4. identifies department improvement needs
+5. creates department agents in `agents/generated/<company-slug>/`
+6. creates `ceo-agent.md` with the consolidated executive view
 
 ### 3. Update generated agents
 
@@ -196,9 +173,12 @@ Each generated agent should contain:
 - core skills
 - optional skills
 - skill usage
+- department improvement needs
+- priority improvements
 - update rules
 
 Example files:
+- [ceo-agent.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/agents/generated/acme-industrial/ceo-agent.md)
 - [sales-agent.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/agents/generated/acme-industrial/sales-agent.md)
 - [finance-agent.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/agents/generated/acme-industrial/finance-agent.md)
 - [hr-agent.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/agents/generated/acme-industrial/hr-agent.md)

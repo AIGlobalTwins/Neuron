@@ -60,7 +60,7 @@ For every materially important outcome, such as diagrams, structured process map
 4. which `FALLBACK_OUTPUTS` Neuron can produce immediately without that capability.
 
 Example:
-- Outcome needed: AS-IS or TO-BE diagram
+- Outcome needed: department improvement report
 - `AVAILABLE_NOW`: Excalidraw connector, diagram MCP, or another visible diagram tool
 - `RECOMMENDED_TO_ADD`: Excalidraw connector or equivalent diagram capability
 - `FALLBACK_OUTPUTS`: structured markdown step report, Excalidraw build spec compatible with `examples/excalidraw-build-spec-template.json`, or implementation-ready process brief

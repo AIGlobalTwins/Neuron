@@ -70,6 +70,15 @@
 - agent_status: generated
 - agent_file: agents/generated/acme-industrial/operations-agent.md
 
+### CEO
+- status: confirmed
+- canonical_key: ceo
+- responsibilities: leadership prioritisation, cross-functional decision-making, review of department improvement agenda
+- dependencies: Sales, Finance, HR, Operations
+- current pain points: fragmented visibility across department needs and shared bottlenecks
+- agent_status: generated
+- agent_file: agents/generated/acme-industrial/ceo-agent.md
+
 ## Operational problems
 - duplicated manual updates between systems
 - slow quote-to-order handoff
@@ -107,6 +116,11 @@
   file: agents/generated/acme-industrial/operations-agent.md
   status: generated
   notes: execution readiness and handoff support
+- department: CEO
+  canonical_key: ceo
+  file: agents/generated/acme-industrial/ceo-agent.md
+  status: generated
+  notes: executive synthesis of department improvement needs
 
 ## Open questions
 - How many approval stages exist before a quote becomes operational work?

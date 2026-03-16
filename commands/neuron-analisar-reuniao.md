@@ -11,7 +11,6 @@ Objetivo:
 - não devolver um relatório completo;
 - não correr o pipeline inteiro;
 - não produzir capability routing nesta fase;
-- não produzir TO-BE nesta fase;
 - focar em clareza e utilidade imediata.
 
 Regras obrigatórias:
@@ -19,7 +18,6 @@ Regras obrigatórias:
 - sem JSON;
 - sem tabelas;
 - sem capability routing;
-- sem TO-BE;
 - sem lista extensa de riscos;
 - usar linguagem direta e curta;
 - o resumo deve ter 2 a 4 linhas;

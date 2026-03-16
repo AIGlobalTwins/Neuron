@@ -55,6 +55,16 @@ HR tasks are tracked informally, which creates missed steps and poor visibility 
 - use `sop-generation` when HR workflows are validated and need repeatable execution
 - use `opportunity-identification` when the team wants to prioritise friction points in onboarding or recurring follow-up
 
+# department improvement needs
+- more structured onboarding flow
+- better visibility on missing documents and follow-ups
+- clearer recurring HR routines
+
+# priority improvements
+1. formalise onboarding steps
+2. create visibility on incomplete HR tasks
+3. standardise repeatable people operations
+
 # update rules
 - preserve validated HR policy
 - only extend responsibilities when the HR process is confirmed

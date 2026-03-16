@@ -87,7 +87,7 @@ List outputs Neuron can still generate when ideal capabilities are missing.
 
 ## Example routing entry
 
-- Need: AS-IS diagram
+- Need: department improvement report
 - AVAILABLE_NOW: none confirmed
-- RECOMMENDED_TO_ADD: Excalidraw connector
-- FALLBACK_OUTPUT: Detailed Excalidraw-ready diagram specification plus step-by-step markdown report
+- RECOMMENDED_TO_ADD: executive dashboard or reporting connector
+- FALLBACK_OUTPUT: Structured markdown improvement summary plus implementation-ready brief

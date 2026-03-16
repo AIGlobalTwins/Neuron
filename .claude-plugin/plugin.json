@@ -13,22 +13,20 @@
     "claude-code",
     "plugin",
     "subagent",
-    "process-mapping",
     "automation",
     "discovery",
     "orchestration",
-    "mcp",
-    "excalidraw"
+    "leadership",
+    "department-agents"
   ],
   "components": {
     "agents": [
       "company-analyzer",
-      "as-is-mapper",
       "opportunity-analyzer",
       "project-evaluator",
-      "to-be-mapper",
       "department-agent-designer",
-      "department-agent-updater"
+      "department-agent-updater",
+      "ceo-agent-designer"
     ],
     "commands": [
       "neuron-avaliar-projeto",

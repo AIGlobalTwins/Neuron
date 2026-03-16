@@ -1,6 +1,6 @@
 {
-  "diagram_title": "AS-IS Lead Handling",
-  "diagram_kind": "as-is",
+  "diagram_title": "Lead Handling Workflow",
+  "diagram_kind": "workflow",
   "lanes": [
     { "id": "marketing", "label": "Marketing" },
     { "id": "sales", "label": "Sales" },

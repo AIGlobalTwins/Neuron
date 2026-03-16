@@ -11,6 +11,7 @@ Use these canonical keys and file names whenever the responsibilities fit:
 - `marketing` -> `marketing-agent.md`
 - `customer-success` -> `customer-success-agent.md`
 - `support` -> `support-agent.md`
+- `ceo` -> `ceo-agent.md`
 - `product` -> `product-agent.md`
 - `engineering` -> `engineering-agent.md`
 - `data` -> `data-agent.md`
