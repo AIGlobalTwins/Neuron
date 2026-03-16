@@ -57,31 +57,37 @@ Acme Industrial has recurring operational friction across Sales, Finance, HR, an
 - use `automation-scoping` when deciding which improvements are ready to become structured initiatives
 - use `sop-generation` when repeated executive review routines should be standardised
 
-# executive improvement report
-## Sales
-- needs cleaner lead qualification criteria
-- needs stronger CRM hygiene and less duplicate updating
-- needs better handoff quality into operations
+# CEO report
+## Resumo executivo
+- Sales, Finance, and Operations have high-impact coordination issues that should move first
+- HR has meaningful process gaps, but they are easier and can be planned after the operational bottlenecks
+- the main company pattern is weak handoffs plus duplicated system updates
 
-## Finance
-- needs clearer invoice follow-up workflow
-- needs better payment-status visibility
-- needs less fragmented tracking across ERP, email, and spreadsheets
+## Principais problemas por departamento
+- Sales: inconsistent qualification, poor CRM hygiene, weak handoff to Operations
+- Finance: fragmented payment visibility, inconsistent overdue follow-up, manual reconciliation load
+- HR: inconsistent onboarding, late document follow-up, recurring tasks run informally
+- Operations: incomplete handoffs, unclear readiness checks, late blocker discovery
 
-## HR
-- needs a more structured onboarding routine
-- needs better follow-up visibility on missing documents and recurring tasks
-- needs more repeatable HR operations
+## Melhorias prioritarias
+- Fazer ja: standardise handoff rules between Sales and Operations
+- Fazer ja: reduce duplicate updates between CRM, ERP, inboxes, and spreadsheets
+- Fazer ja: create one consistent payment-status and escalation routine in Finance
+- Planear a seguir: formalise HR onboarding and document follow-up routines
+- Deixar para depois: automate non-core edge cases that still depend on specialist judgment
 
-## Operations
-- needs stronger upstream handoff quality
-- needs clearer execution readiness checks
-- needs better visibility on blockers before work starts
+## Dependencias criticas
+- agreement between Sales and Operations on mandatory handoff data
+- cleaner source data in CRM and ERP
+- explicit ownership for follow-up, readiness checks, and escalation rules
 
-## Cross-functional priorities
-1. Standardise the information passed between Sales, Finance, and Operations
-2. Reduce duplicated updates across CRM, ERP, email, and spreadsheets
-3. Formalise recurring workflows that are still being run informally
+## Quick wins
+- create a mandatory handoff checklist for Sales and Operations
+- add overdue follow-up triggers for Finance
+- add onboarding and document reminders for HR
+
+## Proximo passo recomendado
+- start with one cross-functional sprint to fix handoff rules and duplicate updates across Sales, Finance, and Operations, then move to HR routine standardisation
 
 # update rules
 - preserve department-level signals unless a department agent is updated

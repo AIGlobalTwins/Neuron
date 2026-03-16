@@ -173,9 +173,31 @@ Each generated agent should contain:
 - core skills
 - optional skills
 - skill usage
-- department improvement needs
-- priority improvements
+- department analysis
 - update rules
+
+Each department agent should use this fixed analysis contract:
+- `## Departamento`
+- `## Problemas encontrados`
+- `## Melhorias recomendadas`
+- `## O que pode ser automatizado`
+- `## O que deve continuar manual`
+- `## Prioridade`
+- `## Dependências`
+
+Inside `## Prioridade`, every agent should score:
+- `impacto`
+- `complexidade`
+- `urgencia`
+- `decisao`
+
+The CEO agent should then consolidate those scores into:
+- `## Resumo executivo`
+- `## Principais problemas por departamento`
+- `## Melhorias prioritarias`
+- `## Dependencias criticas`
+- `## Quick wins`
+- `## Proximo passo recomendado`
 
 Example files:
 - [ceo-agent.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/agents/generated/acme-industrial/ceo-agent.md)

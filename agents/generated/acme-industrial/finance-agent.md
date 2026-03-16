@@ -56,15 +56,40 @@ Finance follow-up is slowed by fragmented records and manual status updates acro
 - use `automation-scoping` when defining payment-status updates, overdue follow-up, or finance handoff automations
 - use `sop-generation` when receivables and invoice follow-up become stable enough to standardise
 
-# department improvement needs
-- clearer invoice follow-up workflow
-- better payment-status visibility
-- less fragmented finance tracking
+# department analysis
+## Departamento
+- Finance
 
-# priority improvements
-1. standardise overdue follow-up logic
-2. improve payment-status visibility across systems
-3. reduce manual reconciliation effort
+## Problemas encontrados
+- overdue follow-up is inconsistent
+- payment status is fragmented across systems
+- reconciliation still depends on manual checking
+
+## Melhorias recomendadas
+- standardise overdue follow-up logic
+- create one reliable payment-status view
+- reduce manual reconciliation steps
+
+## O que pode ser automatizado
+- overdue follow-up queue generation
+- payment-status sync alerts
+- escalation flags for aging invoices
+
+## O que deve continuar manual
+- legal escalation decisions
+- accounting treatment decisions
+- exception review for disputed invoices
+
+## Prioridade
+- impacto: alto
+- complexidade: media
+- urgencia: media
+- decisao: fazer ja
+
+## Dependências
+- ERP data quality
+- alignment with Sales on invoice context
+- clear escalation ownership
 
 # update rules
 - preserve validated finance policy

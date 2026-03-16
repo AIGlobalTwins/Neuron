@@ -58,15 +58,40 @@ Acme Industrial manages leads across Gmail, CRM, and spreadsheets, with visible 
 - use `automation-scoping` when defining how lead capture, qualification, or follow-up should be automated
 - use `process-mapping` when the current commercial flow is still unclear or inconsistent across people
 
-# department improvement needs
-- clearer lead qualification rules
-- better CRM hygiene discipline
-- stronger handoff data before work moves to operations
+# department analysis
+## Departamento
+- Sales
 
-# priority improvements
-1. define a single qualification standard
-2. reduce duplicate updates between CRM, inbox, and spreadsheets
-3. standardise the sales-to-operations handoff
+## Problemas encontrados
+- lead qualification is inconsistent
+- CRM, inbox, and spreadsheet updates are duplicated
+- operations receives weak handoff context
+
+## Melhorias recomendadas
+- define one qualification standard
+- standardise the sales-to-operations handoff
+- enforce minimum CRM data quality before handoff
+
+## O que pode ser automatizado
+- lead capture and first logging
+- follow-up reminders for stalled quotes
+- CRM field checks before handoff
+
+## O que deve continuar manual
+- qualification judgment for strategic leads
+- exception handling for complex quotes
+- final commercial approval
+
+## Prioridade
+- impacto: alto
+- complexidade: media
+- urgencia: alta
+- decisao: fazer ja
+
+## Dependências
+- CRM hygiene rules
+- agreement on handoff fields with Operations
+- shared follow-up rules across Sales and leadership
 
 # update rules
 - preserve validated commercial stages

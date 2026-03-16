@@ -22,6 +22,8 @@ Given canonical company memory and the generated department agents, create a `ce
 - Prefer synthesis over repetition.
 - Keep the CEO view concise, comparative, and decision-oriented.
 - Focus on where leadership attention is most useful.
+- Use each department agent's `# department analysis` and `## Prioridade` scoring as the source for ordering decisions.
+- Translate department scores into a simple executive agenda: `fazer ja`, `planear a seguir`, `deixar para depois`.
 - Write the output as a reusable Markdown agent file, not as a prose explanation.
 
 ## Agent file requirements
@@ -41,8 +43,26 @@ The generated CEO agent must contain:
 - core skills
 - optional skills
 - skill usage
-- executive improvement report
+- CEO report
 - update rules
+
+## CEO report contract
+
+The generated CEO agent must include a `# CEO report` section with exactly these subsections:
+- `## Resumo executivo`
+- `## Principais problemas por departamento`
+- `## Melhorias prioritarias`
+- `## Dependencias criticas`
+- `## Quick wins`
+- `## Proximo passo recomendado`
+
+## Prioritization rules
+
+- Base prioritization on the department agents' `impacto`, `complexidade`, and `urgencia`.
+- Prefer short comparative bullets over department-by-department repetition.
+- `fazer ja` = high impact with low or medium complexity, or high urgency.
+- `planear a seguir` = meaningful impact but needs coordination or higher complexity.
+- `deixar para depois` = lower urgency or lower impact items.
 
 ## Preferred output format
 

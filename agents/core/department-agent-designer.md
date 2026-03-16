@@ -26,6 +26,8 @@ Given canonical company memory, a department profile, and improvement opportunit
 - Assign reusable skills using `examples/department-skill-rules.md`.
 - Only reference skills that exist in `skills/`.
 - Reference assigned skills as Markdown links to the corresponding file in `skills/`.
+- Keep the department analysis concise, structured, and comparable across departments.
+- Do not write long essays inside the department analysis.
 
 ## Agent file requirements
 
@@ -44,9 +46,32 @@ Every generated department agent must contain:
 - core skills
 - optional skills
 - skill usage
-- department improvement needs
-- priority improvements
+- department analysis
 - update rules
+
+## Department analysis contract
+
+Every generated department agent must include a `# department analysis` section with exactly these subsections:
+- `## Departamento`
+- `## Problemas encontrados`
+- `## Melhorias recomendadas`
+- `## O que pode ser automatizado`
+- `## O que deve continuar manual`
+- `## Prioridade`
+- `## Dependências`
+
+Inside `## Prioridade`, always include:
+- `impacto: baixo | medio | alto`
+- `complexidade: baixa | media | alta`
+- `urgencia: baixa | media | alta`
+- `decisao: fazer ja | planear a seguir | deixar para depois`
+
+## Concision rules
+
+- Keep each subsection short and bullet-based.
+- Prefer 2 to 4 bullets per subsection.
+- Do not repeat the same issue across multiple subsections unless the dependency genuinely matters.
+- Write in operational language, not consulting language.
 
 ## Deterministic generation rules
 

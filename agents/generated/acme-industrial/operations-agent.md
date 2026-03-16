@@ -56,15 +56,40 @@ Operations receives inconsistent context from sales and finance, causing delays 
 - use `automation-scoping` when defining how handoffs or execution visibility should be automated
 - use `sop-generation` when operational checks and handoff routines become stable enough to standardise
 
-# department improvement needs
-- stronger handoff quality from upstream teams
-- clearer execution readiness checks
-- better visibility on blockers before work starts
+# department analysis
+## Departamento
+- Operations
 
-# priority improvements
-1. standardise incoming handoff requirements
-2. define a repeatable readiness checklist
-3. improve blocker visibility before execution starts
+## Problemas encontrados
+- incoming handoffs are inconsistent
+- readiness checks are unclear
+- blockers are found too late
+
+## Melhorias recomendadas
+- standardise incoming handoff requirements
+- define a repeatable readiness checklist
+- improve blocker visibility before execution starts
+
+## O que pode ser automatizado
+- handoff completeness checks
+- blocker alerts before execution starts
+- readiness checklist triggers
+
+## O que deve continuar manual
+- specialist review of edge cases
+- operational judgment on disputed ownership
+- final go-ahead for non-standard jobs
+
+## Prioridade
+- impacto: alto
+- complexidade: media
+- urgencia: alta
+- decisao: fazer ja
+
+## Dependências
+- upstream handoff quality from Sales and Finance
+- agreement on mandatory job data
+- ownership of readiness checks
 
 # update rules
 - preserve validated operational stages

@@ -35,6 +35,7 @@ decide whether to:
 - Prefer `merge` over `create-new` when a new role is only a sub-function of an existing canonical department.
 - Preserve existing skill assignments when they are still valid.
 - Reassign skills only when the department responsibilities or workflow maturity materially change.
+- Preserve the fixed `# department analysis` contract unless the product contract itself changes.
 
 ## Update workflow
 
@@ -52,6 +53,7 @@ decide whether to:
 7. Remove obsolete or contradicted assumptions only when justified.
 8. Flag any merge recommendation explicitly.
 9. Review core and optional skills against `examples/department-skill-rules.md`.
+10. Recalculate `impacto`, `complexidade`, `urgencia`, and `decisao` inside `## Prioridade`.
 
 ## Preferred output format
 
