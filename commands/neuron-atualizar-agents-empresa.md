@@ -22,9 +22,36 @@ Regras obrigatórias:
 - se detectares sobreposição entre agents, recomenda merge em vez de duplicação;
 - mantém naming determinístico por canonical key;
 - cria um novo agent apenas quando o novo contexto justificar um novo domínio operacional.
+- preserva o contrato curto dos department agents:
+  - `## Departamento`
+  - `## Problemas encontrados`
+  - `## Melhorias recomendadas`
+  - `## O que pode ser automatizado`
+  - `## O que deve continuar manual`
+  - `## Prioridade`
+  - `## Dependências`
+- em `## Prioridade`, garante sempre:
+  - `impacto`
+  - `complexidade`
+  - `urgencia`
+  - `decisao`
+- regenera `ceo-agent.md` no formato board-ready:
+  - `## Resumo executivo`
+  - `## Principais problemas por departamento`
+  - `## Melhorias prioritarias`
+  - `## Dependencias criticas`
+  - `## Quick wins`
+  - `## Proximo passo recomendado`
+- evita texto longo, repetição, e output em tom de ensaio.
 
 Deliverables mínimos:
 - lista de agents afetados;
 - ação tomada por agent: keep / update / merge / create-new;
-- ficheiros Markdown atualizados quando aplicável.
+- ficheiros Markdown atualizados quando aplicável;
 - `ceo-agent.md` atualizado quando houver mudanças relevantes.
+- resumo final board-ready com:
+  - agents afetados
+  - principais mudanças
+  - prioridades revistas
+  - quick wins
+  - próximo passo recomendado

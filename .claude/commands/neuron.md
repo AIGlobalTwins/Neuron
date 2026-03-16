@@ -103,6 +103,33 @@ Se a ação for `atualizar-agents-empresa`:
 - regenera o `ceo-agent.md` quando qualquer department agent mudar;
 - preserva naming determinístico por canonical key;
 - evita duplicação e recomenda merge quando houver sobreposição.
+- mantém os department agents no mesmo contrato curto:
+  - `## Departamento`
+  - `## Problemas encontrados`
+  - `## Melhorias recomendadas`
+  - `## O que pode ser automatizado`
+  - `## O que deve continuar manual`
+  - `## Prioridade`
+  - `## Dependências`
+- em `## Prioridade`, garante sempre:
+  - `impacto`
+  - `complexidade`
+  - `urgencia`
+  - `decisao`
+- garante que o `ceo-agent.md` continua no formato board-ready:
+  - `## Resumo executivo`
+  - `## Principais problemas por departamento`
+  - `## Melhorias prioritarias`
+  - `## Dependencias criticas`
+  - `## Quick wins`
+  - `## Proximo passo recomendado`
+- no fim, devolve um resumo board-ready curto com:
+  - agents afetados
+  - principais mudanças
+  - prioridades revistas
+  - quick wins
+  - próximo passo recomendado
+- evita texto longo e output em tom de ensaio.
 
 Se a ação for `help` ou estiver ausente:
 - explica que o comando disponível no Claude Code é `/neuron`;
