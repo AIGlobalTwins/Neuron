@@ -28,8 +28,35 @@ Regras obrigatórias:
 - preserva nomes estáveis de ficheiro, por exemplo `sales-agent.md`, `finance-agent.md`;
 - cria também `ceo-agent.md` em `agents/generated/<company-slug>/`;
 - se um department agent não for necessário, explica porquê.
+- cada department agent deve seguir um contrato curto e comparável:
+  - `## Departamento`
+  - `## Problemas encontrados`
+  - `## Melhorias recomendadas`
+  - `## O que pode ser automatizado`
+  - `## O que deve continuar manual`
+  - `## Prioridade`
+  - `## Dependências`
+- em `## Prioridade`, cada department agent deve sempre incluir:
+  - `impacto`
+  - `complexidade`
+  - `urgencia`
+  - `decisao`
+- o `ceo-agent.md` deve ser board-ready e usar exatamente:
+  - `## Resumo executivo`
+  - `## Principais problemas por departamento`
+  - `## Melhorias prioritarias`
+  - `## Dependencias criticas`
+  - `## Quick wins`
+  - `## Proximo passo recomendado`
+- prefere bullets curtos e linguagem executiva clara;
+- evita texto longo, ensaios, e repetição entre departamentos.
 
 Deliverables mínimos:
 - `company-data/<company-slug>/company-context.md`
 - um ou mais ficheiros em `agents/generated/<company-slug>/`
-- resumo final com departamentos gerados e rationale
+- resumo final board-ready com:
+  - empresa analisada
+  - departamentos gerados
+  - principais prioridades
+  - quick wins
+  - próximo passo recomendado

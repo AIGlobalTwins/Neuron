@@ -67,6 +67,33 @@ Se a ação for `gerar-agents-empresa`:
 - resolve departments para canonical keys estáveis antes de criar ou atualizar ficheiros;
 - usa naming determinístico no formato `<canonical-key>-agent.md`;
 - evita agentes redundantes e prefere consolidar roles semelhantes.
+- obriga cada department agent a devolver um formato curto e comparável:
+  - `## Departamento`
+  - `## Problemas encontrados`
+  - `## Melhorias recomendadas`
+  - `## O que pode ser automatizado`
+  - `## O que deve continuar manual`
+  - `## Prioridade`
+  - `## Dependências`
+- em `## Prioridade`, garante sempre:
+  - `impacto`
+  - `complexidade`
+  - `urgencia`
+  - `decisao`
+- garante que o `ceo-agent.md` usa exatamente:
+  - `## Resumo executivo`
+  - `## Principais problemas por departamento`
+  - `## Melhorias prioritarias`
+  - `## Dependencias criticas`
+  - `## Quick wins`
+  - `## Proximo passo recomendado`
+- no fim, devolve um resumo board-ready curto com:
+  - empresa analisada
+  - departamentos gerados
+  - principais prioridades
+  - quick wins
+  - próximo passo recomendado
+- evita texto longo e output em tom de ensaio.
 
 Se a ação for `atualizar-agents-empresa`:
 - lê contexto existente em `company-data/` e `agents/generated/`;
