@@ -53,6 +53,63 @@
   status:
   notes:
 
+## Discovery checklist
+
+### Company Structure
+- departments identified:
+  status:
+  note:
+- decision makers:
+  status:
+  note:
+
+### Systems
+- CRM:
+  status:
+  note:
+- communication tools:
+  status:
+  note:
+- finance tools:
+  status:
+  note:
+- internal tools:
+  status:
+  note:
+
+### Processes
+- lead generation:
+  status:
+  note:
+- sales workflow:
+  status:
+  note:
+- customer onboarding:
+  status:
+  note:
+- customer support:
+  status:
+  note:
+- billing:
+  status:
+  note:
+
+### Automation
+- existing automations:
+  status:
+  note:
+- integrations:
+  status:
+  note:
+
+### Metrics
+- main KPIs:
+  status:
+  note:
+- company goals:
+  status:
+  note:
+
 ## Open questions
 - question:
 - question:

@@ -37,6 +37,10 @@ decide whether to:
 - Reassign skills only when the department responsibilities or workflow maturity materially change.
 - Preserve the fixed `# department analysis` contract unless the product contract itself changes.
 - Use `skills/opportunity-scoring.md` when recalculating department priority.
+- Read and use the YAML metadata block from existing generated agents before deciding whether to update or create a file.
+- Preserve `agent_id` when updating an existing agent.
+- Increment `version` on update and refresh `last_updated`.
+- Use metadata to avoid duplicate agents for the same company and canonical department.
 
 ## Update workflow
 
@@ -49,12 +53,15 @@ decide whether to:
    - update existing generated agents index.
 3. Resolve each affected department to its canonical key.
 4. Identify which existing agents are affected.
-5. Preserve validated context.
-6. Insert new relevant context.
-7. Remove obsolete or contradicted assumptions only when justified.
-8. Flag any merge recommendation explicitly.
-9. Review core and optional skills against `examples/department-skill-rules.md`.
-10. Recalculate `impacto`, `complexidade`, `urgencia`, and `decisao` inside `## Prioridade`.
+5. Read existing YAML metadata if the agent file already exists.
+6. Preserve validated context.
+7. Insert new relevant context.
+8. Remove obsolete or contradicted assumptions only when justified.
+9. Flag any merge recommendation explicitly.
+10. Review core and optional skills against `examples/department-skill-rules.md`.
+11. Recalculate `impacto`, `complexidade`, `urgencia`, and `decisao` inside `## Prioridade`.
+12. If updating an existing file, preserve `agent_id`, increment `version`, and update `last_updated`.
+13. If creating a new file, create the full YAML metadata block before the Markdown body.
 
 ## Preferred output format
 

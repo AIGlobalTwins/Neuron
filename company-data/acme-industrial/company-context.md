@@ -122,6 +122,63 @@
   status: generated
   notes: executive synthesis of department improvement needs
 
+## Discovery checklist
+
+### Company Structure
+- departments identified:
+  status: confirmed
+  note: Sales, Finance, HR, Operations, and CEO are explicit in the current company memory.
+- decision makers:
+  status: inferred
+  note: CEO is explicit, but the full operating decision-maker set by department is still incomplete.
+
+### Systems
+- CRM:
+  status: confirmed
+  note: CRM is explicitly listed in systems in use.
+- communication tools:
+  status: confirmed
+  note: Gmail is explicitly used for communication.
+- finance tools:
+  status: confirmed
+  note: ERP is explicitly used in finance-related work.
+- internal tools:
+  status: confirmed
+  note: Google Sheets and shared drive are explicitly used internally.
+
+### Processes
+- lead generation:
+  status: inferred
+  note: Inbound lead handling is visible, but the full lead generation model is not fully described.
+- sales workflow:
+  status: confirmed
+  note: Qualification, quote follow-up, and commercial handoff are explicit.
+- customer onboarding:
+  status: unknown
+  note: No customer onboarding process is clearly described in the current memory.
+- customer support:
+  status: unknown
+  note: No dedicated support workflow is confirmed.
+- billing:
+  status: confirmed
+  note: Invoice follow-up and payment visibility are explicit.
+
+### Automation
+- existing automations:
+  status: unknown
+  note: The current memory does not confirm any live automation already in place.
+- integrations:
+  status: inferred
+  note: Multiple systems exchange information operationally, but explicit integrations are not yet confirmed.
+
+### Metrics
+- main KPIs:
+  status: unknown
+  note: No explicit KPIs are listed in the current discovery material.
+- company goals:
+  status: inferred
+  note: Reducing duplication, delays, and weak handoffs is implied, but formal company goals are not explicit.
+
 ## Open questions
 - How many approval stages exist before a quote becomes operational work?
 - Is credit control inside Finance already a distinct sub-function?

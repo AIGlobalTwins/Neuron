@@ -77,6 +77,7 @@ neuron/
 ## Reusable skills
 
 - [process-mapping](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/process-mapping.md)
+- [company-discovery-checklist](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/company-discovery-checklist.md)
 - [opportunity-identification](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-identification.md)
 - [opportunity-scoring](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-scoring.md)
 - [automation-scoping](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/automation-scoping.md)
@@ -165,6 +166,7 @@ What it does:
 ## Generated agent model
 
 Each generated agent should contain:
+- YAML metadata block
 - name
 - canonical key
 - department
@@ -181,6 +183,15 @@ Each generated agent should contain:
 - skill usage
 - department analysis
 - update rules
+
+Required YAML metadata:
+- `agent_id`
+- `department`
+- `company`
+- `base_agent`
+- `version`
+- `created_by`
+- `last_updated`
 
 Each department agent should use this fixed analysis contract:
 - `## Departamento`
@@ -201,12 +212,13 @@ These scores should follow:
 - [opportunity-scoring](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-scoring.md)
 
 The CEO agent should then consolidate those scores into:
-- `## Resumo executivo`
-- `## Principais problemas por departamento`
-- `## Melhorias prioritarias`
-- `## Dependencias criticas`
+- `## Executive Summary`
+- `## Top Priorities`
 - `## Quick wins`
-- `## Proximo passo recomendado`
+- `## Cross-Department Issues`
+- `## Dependencies`
+- `## Recommended Roadmap`
+- `## Next Step`
 
 Example files:
 - [ceo-agent.md](/Users/daniloguerreiro/Desktop/Neuron/neuron/agents/generated/acme-industrial/ceo-agent.md)
@@ -231,6 +243,7 @@ That memory should separate:
 - working hypotheses
 - departments
 - existing generated agents
+- discovery checklist items marked as `confirmed`, `inferred`, or `unknown`
 - decisions made
 - open questions
 

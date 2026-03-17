@@ -43,12 +43,13 @@ Regras obrigatórias:
   - `urgencia`
   - `decisao`
 - o `ceo-agent.md` deve ser board-ready e usar exatamente:
-  - `## Resumo executivo`
-  - `## Principais problemas por departamento`
-  - `## Melhorias prioritarias`
-  - `## Dependencias criticas`
+  - `## Executive Summary`
+  - `## Top Priorities`
   - `## Quick wins`
-  - `## Proximo passo recomendado`
+  - `## Cross-Department Issues`
+  - `## Dependencies`
+  - `## Recommended Roadmap`
+  - `## Next Step`
 - prefere bullets curtos e linguagem executiva clara;
 - evita texto longo, ensaios, e repetição entre departamentos.
 

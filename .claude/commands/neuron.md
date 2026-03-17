@@ -82,12 +82,13 @@ Se a ação for `gerar-agents-empresa`:
   - `urgencia`
   - `decisao`
 - garante que o `ceo-agent.md` usa exatamente:
-  - `## Resumo executivo`
-  - `## Principais problemas por departamento`
-  - `## Melhorias prioritarias`
-  - `## Dependencias criticas`
+  - `## Executive Summary`
+  - `## Top Priorities`
   - `## Quick wins`
-  - `## Proximo passo recomendado`
+  - `## Cross-Department Issues`
+  - `## Dependencies`
+  - `## Recommended Roadmap`
+  - `## Next Step`
 - no fim, devolve um resumo board-ready curto com:
   - empresa analisada
   - departamentos gerados
@@ -119,12 +120,13 @@ Se a ação for `atualizar-agents-empresa`:
   - `urgencia`
   - `decisao`
 - garante que o `ceo-agent.md` continua no formato board-ready:
-  - `## Resumo executivo`
-  - `## Principais problemas por departamento`
-  - `## Melhorias prioritarias`
-  - `## Dependencias criticas`
+  - `## Executive Summary`
+  - `## Top Priorities`
   - `## Quick wins`
-  - `## Proximo passo recomendado`
+  - `## Cross-Department Issues`
+  - `## Dependencies`
+  - `## Recommended Roadmap`
+  - `## Next Step`
 - no fim, devolve um resumo board-ready curto com:
   - agents afetados
   - principais mudanças

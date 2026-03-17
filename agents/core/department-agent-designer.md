@@ -33,6 +33,7 @@ Given canonical company memory, a department profile, and improvement opportunit
 ## Agent file requirements
 
 Every generated department agent must contain:
+- a YAML metadata block at the top of the file
 - name
 - canonical key
 - department
@@ -49,6 +50,32 @@ Every generated department agent must contain:
 - skill usage
 - department analysis
 - update rules
+
+## Required metadata block
+
+Every generated department agent must start with a YAML block in this form:
+
+```yaml
+---
+agent_id: <canonical-key>-agent-<company-slug>
+department: <canonical-key>
+company: <company-slug>
+base_agent: department-agent
+version: 1
+created_by: neuron
+last_updated: YYYY-MM-DD
+---
+```
+
+## Metadata rules
+
+- `agent_id` must be stable for the life of the agent.
+- `department` must match the canonical key.
+- `company` must match the company slug from `company-context.md`.
+- `base_agent` must be `department-agent` for department agents.
+- `version` starts at `1` when the file is first created.
+- `created_by` must be `neuron`.
+- `last_updated` must be the current update date.
 
 ## Department analysis contract
 

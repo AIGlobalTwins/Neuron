@@ -37,12 +37,13 @@ Regras obrigatórias:
   - `urgencia`
   - `decisao`
 - regenera `ceo-agent.md` no formato board-ready:
-  - `## Resumo executivo`
-  - `## Principais problemas por departamento`
-  - `## Melhorias prioritarias`
-  - `## Dependencias criticas`
+  - `## Executive Summary`
+  - `## Top Priorities`
   - `## Quick wins`
-  - `## Proximo passo recomendado`
+  - `## Cross-Department Issues`
+  - `## Dependencies`
+  - `## Recommended Roadmap`
+  - `## Next Step`
 - evita texto longo, repetição, e output em tom de ensaio.
 
 Deliverables mínimos:

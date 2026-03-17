@@ -25,6 +25,7 @@ Given a transcript, company description, discovery notes, or existing operationa
 - Do not create a department agent recommendation unless there is a clear operational reason.
 - Merge overlapping roles when the evidence suggests one shared operating domain.
 - Distinguish clearly between `validated facts` and `working hypotheses`.
+- Use `skills/company-discovery-checklist.md` to expose missing business information.
 - Produce output in a form that can be saved directly as `company-data/<company-slug>/company-context.md`.
 
 ## What to extract
@@ -42,6 +43,7 @@ Given a transcript, company description, discovery notes, or existing operationa
 - explicit decisions already made
 - open questions that still affect agent generation
 - any existing generated agents if they are visible in context
+- discovery gaps across company structure, systems, processes, automation, and metrics
 
 ## Preferred output format
 
@@ -81,6 +83,36 @@ For each department include:
 ## Decisions made
 
 ## Existing generated agents
+
+## Discovery checklist
+For each item include:
+- status: confirmed / inferred / unknown
+- note:
+
+### Company Structure
+- departments identified
+- decision makers
+
+### Systems
+- CRM
+- communication tools
+- finance tools
+- internal tools
+
+### Processes
+- lead generation
+- sales workflow
+- customer onboarding
+- customer support
+- billing
+
+### Automation
+- existing automations
+- integrations
+
+### Metrics
+- main KPIs
+- company goals
 
 ## Open questions
 

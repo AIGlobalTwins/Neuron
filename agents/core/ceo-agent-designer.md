@@ -25,11 +25,15 @@ Given canonical company memory and the generated department agents, create a `ce
 - Use each department agent's `# department analysis` and `## Prioridade` scoring as the source for ordering decisions.
 - Use `skills/opportunity-scoring.md` as the interpretation layer for department scores.
 - Translate department scores into a simple executive agenda: `fazer ja`, `planear a seguir`, `deixar para depois`.
+- Detect issues that appear across multiple departments and elevate them into cross-department priorities.
+- Make dependencies explicit when one improvement relies on another team, system, or sequencing step.
+- Keep the report short enough for executive review.
 - Write the output as a reusable Markdown agent file, not as a prose explanation.
 
 ## Agent file requirements
 
 The generated CEO agent must contain:
+- a YAML metadata block at the top of the file
 - name
 - canonical key
 - department
@@ -47,21 +51,39 @@ The generated CEO agent must contain:
 - CEO report
 - update rules
 
+## Required metadata block
+
+The generated CEO agent must start with a YAML block in this form:
+
+```yaml
+---
+agent_id: ceo-agent-<company-slug>
+department: ceo
+company: <company-slug>
+base_agent: ceo-agent
+version: 1
+created_by: neuron
+last_updated: YYYY-MM-DD
+---
+```
+
 ## CEO report contract
 
 The generated CEO agent must include a `# CEO report` section with exactly these subsections:
-- `## Resumo executivo`
-- `## Principais problemas por departamento`
-- `## Melhorias prioritarias`
-- `## Dependencias criticas`
+- `## Executive Summary`
+- `## Top Priorities`
 - `## Quick wins`
-- `## Proximo passo recomendado`
+- `## Cross-Department Issues`
+- `## Dependencies`
+- `## Recommended Roadmap`
+- `## Next Step`
 
 ## Prioritization rules
 
 - Base prioritization on the department agents' `impacto`, `complexidade`, and `urgencia`.
 - Apply the same scoring logic across departments before ranking initiatives.
 - Prefer short comparative bullets over department-by-department repetition.
+- Use opportunity scoring to justify why something is a top priority versus a later initiative.
 - `fazer ja` = high impact with low or medium complexity, or high urgency.
 - `planear a seguir` = meaningful impact but needs coordination or higher complexity.
 - `deixar para depois` = lower urgency or lower impact items.

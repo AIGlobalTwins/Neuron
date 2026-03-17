@@ -1,3 +1,13 @@
+---
+agent_id: finance-agent-acme-industrial
+department: finance
+company: acme-industrial
+base_agent: department-agent
+version: 1
+created_by: neuron
+last_updated: 2026-03-17
+---
+
 # name
 finance-agent
 
