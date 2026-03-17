@@ -78,6 +78,7 @@ neuron/
 
 - [process-mapping](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/process-mapping.md)
 - [opportunity-identification](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-identification.md)
+- [opportunity-scoring](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-scoring.md)
 - [automation-scoping](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/automation-scoping.md)
 - [sop-generation](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/sop-generation.md)
 
@@ -195,6 +196,9 @@ Inside `## Prioridade`, every agent should score:
 - `complexidade`
 - `urgencia`
 - `decisao`
+
+These scores should follow:
+- [opportunity-scoring](/Users/daniloguerreiro/Desktop/Neuron/neuron/skills/opportunity-scoring.md)
 
 The CEO agent should then consolidate those scores into:
 - `## Resumo executivo`

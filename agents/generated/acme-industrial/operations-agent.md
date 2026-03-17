@@ -46,6 +46,7 @@ Operations receives inconsistent context from sales and finance, causing delays 
 
 # core skills
 - [process-mapping](../../skills/process-mapping.md)
+- [opportunity-scoring](../../skills/opportunity-scoring.md)
 - [automation-scoping](../../skills/automation-scoping.md)
 
 # optional skills
@@ -53,6 +54,7 @@ Operations receives inconsistent context from sales and finance, causing delays 
 
 # skill usage
 - use `process-mapping` when handoffs, readiness checks, or execution blockers are still unclear
+- use `opportunity-scoring` when ranking operational improvements by impact, complexity, and urgency
 - use `automation-scoping` when defining how handoffs or execution visibility should be automated
 - use `sop-generation` when operational checks and handoff routines become stable enough to standardise
 

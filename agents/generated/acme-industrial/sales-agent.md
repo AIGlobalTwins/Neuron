@@ -48,6 +48,7 @@ Acme Industrial manages leads across Gmail, CRM, and spreadsheets, with visible 
 
 # core skills
 - [opportunity-identification](../../skills/opportunity-identification.md)
+- [opportunity-scoring](../../skills/opportunity-scoring.md)
 - [automation-scoping](../../skills/automation-scoping.md)
 
 # optional skills
@@ -55,6 +56,7 @@ Acme Industrial manages leads across Gmail, CRM, and spreadsheets, with visible 
 
 # skill usage
 - use `opportunity-identification` when leads stall, handoffs degrade, or the team needs a prioritised shortlist of issues
+- use `opportunity-scoring` when classifying sales improvements by impact, complexity, and urgency
 - use `automation-scoping` when defining how lead capture, qualification, or follow-up should be automated
 - use `process-mapping` when the current commercial flow is still unclear or inconsistent across people
 

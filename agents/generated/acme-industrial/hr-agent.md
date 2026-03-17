@@ -45,6 +45,7 @@ HR tasks are tracked informally, which creates missed steps and poor visibility 
 
 # core skills
 - [process-mapping](../../skills/process-mapping.md)
+- [opportunity-scoring](../../skills/opportunity-scoring.md)
 - [sop-generation](../../skills/sop-generation.md)
 
 # optional skills
@@ -52,6 +53,7 @@ HR tasks are tracked informally, which creates missed steps and poor visibility 
 
 # skill usage
 - use `process-mapping` when onboarding or recurring HR routines are still informal or inconsistent
+- use `opportunity-scoring` when ranking HR improvements by impact, complexity, and urgency
 - use `sop-generation` when HR workflows are validated and need repeatable execution
 - use `opportunity-identification` when the team wants to prioritise friction points in onboarding or recurring follow-up
 

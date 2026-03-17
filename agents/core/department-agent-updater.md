@@ -36,6 +36,7 @@ decide whether to:
 - Preserve existing skill assignments when they are still valid.
 - Reassign skills only when the department responsibilities or workflow maturity materially change.
 - Preserve the fixed `# department analysis` contract unless the product contract itself changes.
+- Use `skills/opportunity-scoring.md` when recalculating department priority.
 
 ## Update workflow
 

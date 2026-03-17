@@ -8,6 +8,7 @@ List them as Markdown links to the matching skill file.
 Current skill catalogue:
 - [process-mapping](../skills/process-mapping.md)
 - [opportunity-identification](../skills/opportunity-identification.md)
+- [opportunity-scoring](../skills/opportunity-scoring.md)
 - [automation-scoping](../skills/automation-scoping.md)
 - [sop-generation](../skills/sop-generation.md)
 
@@ -22,16 +23,17 @@ Current skill catalogue:
 
 - use `process-mapping` when the department still has unclear or inconsistent operational flow
 - use `opportunity-identification` when the agent should surface bottlenecks, prioritise issues, or highlight automation candidates
+- use `opportunity-scoring` when the agent should classify or compare opportunities by impact, complexity, and urgency
 - use `automation-scoping` when the agent should define automation boundaries, triggers, inputs, outputs, or implementation shape
 - use `sop-generation` when the workflow is stable enough to convert into repeatable procedures
 
 ## Department guidance
 
-- `sales`: usually `opportunity-identification`, `automation-scoping`, optional `process-mapping`
-- `finance`: usually `opportunity-identification`, `automation-scoping`, optional `sop-generation`
-- `hr`: usually `process-mapping`, `sop-generation`, optional `opportunity-identification`
-- `operations`: usually `process-mapping`, `automation-scoping`, optional `sop-generation`
-- `ceo`: usually `opportunity-identification`, `automation-scoping`, optional `sop-generation`
+- `sales`: usually `opportunity-identification`, `opportunity-scoring`, `automation-scoping`, optional `process-mapping`
+- `finance`: usually `opportunity-identification`, `opportunity-scoring`, `automation-scoping`, optional `sop-generation`
+- `hr`: usually `process-mapping`, `opportunity-scoring`, `sop-generation`, optional `opportunity-identification`
+- `operations`: usually `process-mapping`, `opportunity-scoring`, `automation-scoping`, optional `sop-generation`
+- `ceo`: usually `opportunity-identification`, `opportunity-scoring`, `automation-scoping`, optional `sop-generation`
 
 ## No-noise rule
 

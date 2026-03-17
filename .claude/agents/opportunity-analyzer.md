@@ -23,6 +23,7 @@ Given a transcript, department context, or structured workflow description, iden
 
 - Do not assume every manual step should be automated.
 - Preserve human judgment where risk, compliance, trust, or nuance matters.
+- Use `skills/opportunity-scoring.md` when classifying opportunities.
 - Distinguish between:
   - eliminate,
   - automate,
@@ -58,8 +59,9 @@ For each candidate include:
 - candidate
 - current problem
 - recommendation type: eliminate / automate / assist / standardise / keep manual
-- expected impact: low / medium / high
+- impact: low / medium / high
 - complexity: low / medium / high
+- urgency: low / medium / high
 - dependencies
 - risks
 

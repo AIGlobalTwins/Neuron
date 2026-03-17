@@ -46,6 +46,7 @@ Finance follow-up is slowed by fragmented records and manual status updates acro
 
 # core skills
 - [opportunity-identification](../../skills/opportunity-identification.md)
+- [opportunity-scoring](../../skills/opportunity-scoring.md)
 - [automation-scoping](../../skills/automation-scoping.md)
 
 # optional skills
@@ -53,6 +54,7 @@ Finance follow-up is slowed by fragmented records and manual status updates acro
 
 # skill usage
 - use `opportunity-identification` when invoice follow-up bottlenecks or reconciliation pain points need prioritisation
+- use `opportunity-scoring` when comparing finance improvements by impact, complexity, and urgency
 - use `automation-scoping` when defining payment-status updates, overdue follow-up, or finance handoff automations
 - use `sop-generation` when receivables and invoice follow-up become stable enough to standardise
 

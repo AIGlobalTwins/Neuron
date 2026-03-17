@@ -28,6 +28,7 @@ Given canonical company memory, a department profile, and improvement opportunit
 - Reference assigned skills as Markdown links to the corresponding file in `skills/`.
 - Keep the department analysis concise, structured, and comparable across departments.
 - Do not write long essays inside the department analysis.
+- Use `skills/opportunity-scoring.md` when setting department priority.
 
 ## Agent file requirements
 
@@ -65,6 +66,8 @@ Inside `## Prioridade`, always include:
 - `complexidade: baixa | media | alta`
 - `urgencia: baixa | media | alta`
 - `decisao: fazer ja | planear a seguir | deixar para depois`
+
+Use the definitions from `skills/opportunity-scoring.md` when assigning these scores.
 
 ## Concision rules
 

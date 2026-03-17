@@ -23,6 +23,7 @@ Given canonical company memory and the generated department agents, create a `ce
 - Keep the CEO view concise, comparative, and decision-oriented.
 - Focus on where leadership attention is most useful.
 - Use each department agent's `# department analysis` and `## Prioridade` scoring as the source for ordering decisions.
+- Use `skills/opportunity-scoring.md` as the interpretation layer for department scores.
 - Translate department scores into a simple executive agenda: `fazer ja`, `planear a seguir`, `deixar para depois`.
 - Write the output as a reusable Markdown agent file, not as a prose explanation.
 
@@ -59,6 +60,7 @@ The generated CEO agent must include a `# CEO report` section with exactly these
 ## Prioritization rules
 
 - Base prioritization on the department agents' `impacto`, `complexidade`, and `urgencia`.
+- Apply the same scoring logic across departments before ranking initiatives.
 - Prefer short comparative bullets over department-by-department repetition.
 - `fazer ja` = high impact with low or medium complexity, or high urgency.
 - `planear a seguir` = meaningful impact but needs coordination or higher complexity.

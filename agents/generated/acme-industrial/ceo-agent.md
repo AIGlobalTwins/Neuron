@@ -47,6 +47,7 @@ Acme Industrial has recurring operational friction across Sales, Finance, HR, an
 
 # core skills
 - [opportunity-identification](../../skills/opportunity-identification.md)
+- [opportunity-scoring](../../skills/opportunity-scoring.md)
 - [automation-scoping](../../skills/automation-scoping.md)
 
 # optional skills
@@ -54,6 +55,7 @@ Acme Industrial has recurring operational friction across Sales, Finance, HR, an
 
 # skill usage
 - use `opportunity-identification` when leadership needs a prioritised view of the biggest company-wide issues
+- use `opportunity-scoring` when comparing department opportunities through impact, complexity, and urgency
 - use `automation-scoping` when deciding which improvements are ready to become structured initiatives
 - use `sop-generation` when repeated executive review routines should be standardised
 
