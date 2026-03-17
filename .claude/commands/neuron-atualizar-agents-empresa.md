@@ -8,11 +8,12 @@ Usa este input para atualizar agents existentes:
 $ARGUMENTS
 
 Fluxo obrigatório:
-1. Lê o contexto existente em `company-data/<company-slug>/` quando existir.
-2. Identifica quais departments e agents são afetados pela nova informação.
-3. Usa `department-agent-updater` para atualizar os ficheiros relevantes.
-4. Atualiza `company-data/<company-slug>/company-context.md` como memória canónica, preservando factos validados e hipóteses separadas.
-5. Regenera `ceo-agent.md` para refletir o novo estado dos department agents.
+1. Usa `neuron-orchestrator` para coordenar a sequência correta do pipeline.
+2. Lê o contexto existente em `company-data/<company-slug>/` quando existir.
+3. Identifica quais departments e agents são afetados pela nova informação.
+4. Usa `department-agent-updater` para atualizar os ficheiros relevantes.
+5. Atualiza `company-data/<company-slug>/company-context.md` como memória canónica, preservando factos validados e hipóteses separadas.
+6. Regenera `ceo-agent.md` para refletir o novo estado dos department agents.
 
 Regras obrigatórias:
 - preserva informação validada;

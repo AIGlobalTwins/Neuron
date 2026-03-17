@@ -8,11 +8,12 @@ Usa este input para gerar a estrutura de agents por empresa:
 $ARGUMENTS
 
 Fluxo obrigatório:
-1. Usa `company-analyzer` para identificar empresa, departamentos, desafios e oportunidades.
-2. Usa `opportunity-analyzer` para listar oportunidades e necessidades de melhoria por departamento.
-3. Usa `department-agent-designer` para criar um agent Markdown para cada departamento que realmente precise de melhoria operacional.
-4. Usa `ceo-agent-designer` para criar um `ceo-agent.md` que sintetiza a análise de todos os department agents.
-5. Guarda primeiro uma memória canónica da empresa em `company-data/<company-slug>/company-context.md` e usa-a como source of truth para os agents.
+1. Usa `neuron-orchestrator` para coordenar a sequência correta do pipeline.
+2. Usa `company-analyzer` para identificar empresa, departamentos, desafios e oportunidades.
+3. Usa `opportunity-analyzer` para listar oportunidades e necessidades de melhoria por departamento.
+4. Usa `department-agent-designer` para criar um agent Markdown para cada departamento que realmente precise de melhoria operacional.
+5. Usa `ceo-agent-designer` para criar um `ceo-agent.md` que sintetiza a análise de todos os department agents.
+6. Guarda primeiro uma memória canónica da empresa em `company-data/<company-slug>/company-context.md` e usa-a como source of truth para os agents.
 
 Regras obrigatórias:
 - cria ficheiros apenas quando existe justificação operacional;

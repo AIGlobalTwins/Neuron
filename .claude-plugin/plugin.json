@@ -21,6 +21,7 @@
   ],
   "components": {
     "agents": [
+      "neuron-orchestrator",
       "company-analyzer",
       "opportunity-analyzer",
       "project-evaluator",

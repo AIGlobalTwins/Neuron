@@ -1,6 +1,6 @@
 # Neuron
 
-Process discovery, capability routing, and department-agent generation for Claude Code.
+Process discovery, capability routing, and department-agent generation for Claude Code, coordinated by a central Neuron orchestrator.
 
 ## Install
 
@@ -36,6 +36,7 @@ Additional direct commands:
 - Generates specialised department agents as Markdown files
 - Generates a CEO-facing agent that consolidates department improvement needs
 - Updates generated agents when new company information appears
+- Uses a central orchestrator to control the main execution flow and avoid redundant runs
 - Reuses shared skills for process mapping, opportunity analysis, scoping, design, and SOP work
 
 ## Repository architecture
@@ -44,6 +45,7 @@ Additional direct commands:
 neuron/
 ├── agents/
 │   ├── core/
+│   │   ├── neuron-orchestrator.md
 │   │   ├── company-analyzer.md
 │   │   ├── opportunity-analyzer.md
 │   │   ├── project-evaluator.md
@@ -64,6 +66,7 @@ neuron/
 
 ## Core agents
 
+- `neuron-orchestrator` -> controls the main Neuron flow and decides which agents run next
 - `company-analyzer` -> identifies company context, departments, and agent candidates
 - `opportunity-analyzer` -> identifies operational and automation opportunities
 - `project-evaluator` -> routes work across available capabilities and fallbacks
@@ -133,12 +136,13 @@ Use:
 ```
 
 What it does:
-1. analyses the company
-2. creates a canonical company memory in `company-data/<company-slug>/company-context.md`
-3. identifies relevant departments
-4. identifies department improvement needs
-5. creates department agents in `agents/generated/<company-slug>/`
-6. creates `ceo-agent.md` with the consolidated executive view
+1. `neuron-orchestrator` coordinates the flow
+2. analyses the company
+3. creates a canonical company memory in `company-data/<company-slug>/company-context.md`
+4. identifies relevant departments
+5. identifies department improvement needs
+6. creates department agents in `agents/generated/<company-slug>/`
+7. creates `ceo-agent.md` with the consolidated executive view
 
 ### 3. Update generated agents
 
@@ -149,12 +153,13 @@ Use:
 ```
 
 What it does:
-1. reads canonical company memory
-2. identifies affected agents
-3. updates company memory first
-4. updates only the necessary files
-5. preserves validated information
-6. avoids duplicate department agents
+1. `neuron-orchestrator` checks the current pipeline state
+2. reads canonical company memory
+3. identifies affected agents
+4. updates company memory first
+5. updates only the necessary files
+6. preserves validated information
+7. avoids duplicate department agents
 
 ## Generated agent model
 

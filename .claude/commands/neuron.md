@@ -57,6 +57,7 @@ Devolve exatamente nesta estrutura:
 ## Próximo passo
 
 Se a ação for `gerar-agents-empresa`:
+- usa `neuron-orchestrator` como coordenador do fluxo principal;
 - usa `company-analyzer` para identificar departamentos relevantes, desafios e oportunidades;
 - usa `opportunity-analyzer` por departamento para identificar necessidades de melhoria;
 - usa `department-agent-designer` para gerar ficheiros Markdown em `agents/generated/<company-slug>/`;
@@ -96,6 +97,7 @@ Se a ação for `gerar-agents-empresa`:
 - evita texto longo e output em tom de ensaio.
 
 Se a ação for `atualizar-agents-empresa`:
+- usa `neuron-orchestrator` como coordenador do fluxo principal;
 - lê contexto existente em `company-data/` e `agents/generated/`;
 - identifica apenas os agents afetados;
 - usa `department-agent-updater` para preservar informação validada e integrar novo contexto;
