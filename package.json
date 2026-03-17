@@ -1,6 +1,6 @@
 {
   "name": "@kikompg/neuron-cc",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "Neuron installer for Claude Code process discovery, capability routing, and department-agent generation.",
   "license": "MIT",
   "author": {
